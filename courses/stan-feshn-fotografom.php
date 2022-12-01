@@ -13,7 +13,7 @@ Template Post Type: p
             <img src="<? echo get_template_directory_uri() ?>/public/img/icons/close-black.svg" alt="" />
         </button>
         <div class="modalWindow-form callbackModal__form">
-            <script id="22cd5082d580afbd97a148887ed2fa8dd0943e15" src="https://lk.senseischool.ru/pl/lite/widget/script?id=784168"></script>
+            <script id="c3a03cd1e201705473da2555b2915211be2b281e" src="https://lk.senseischool.ru/pl/lite/widget/script?id=785138"></script>
         </div>
     </div>
 </div>

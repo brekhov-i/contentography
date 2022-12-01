@@ -21,13 +21,13 @@
                     </li>
                     <li class="list__item">
                         <div class="item__dot"></div>
-                        <div class="item__text">Полное погружение в фэшн-фотографию за 3 дня</div>
+                        <div class="item__text">Погружение в фэшн-фотографию за 3 эфира</div>
                     </li>
                 </ul>
-                <button class="btn heroSection__btn linkScroll" href="#tariff">Участвовать за 1500 вместо <del>5990</del></button>
+                <button class="btn heroSection__btn linkScroll" href="#tariff">Участвовать за 2500 вместо <del>5990</del></button>
             </div>
             <div class="heroSection__image">
-                <div class="image__frame">28-30 ноября</div>
+                <div class="image__frame">доступ после покупки</div>
                 <picture>
                     <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/stan-feshn-fotografom/heroSectionImg.webp" type="image/webp">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/stan-feshn-fotografom/heroSectionImg.png" alt="">

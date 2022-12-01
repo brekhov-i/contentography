@@ -1,18 +1,32 @@
+<?php
+date_default_timezone_set('Europe/Moscow');
+$arrayMounth = array("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+$date2 = DateTime::createFromFormat('d.m.Y', "26.11.2022"); // Преобразовываем дату в необходимый формат
+$date1 = new DateTime(); // Сейчас
+$dayDiff = (int) $date2->diff($date1)->format('%a');
+$dateEnd = date('Y-m-d H:i:s', strtotime("2022-12-01 00:00:00"));
+$dayAdd = "+" . (string) 3 * intdiv($dayDiff, 3) . "day";
+
+$viewDate = date('Y-m-d H:i:s', strtotime($dayAdd, strtotime($dateEnd)));
+$viewDate = date("d", strtotime($viewDate)) . " " . $arrayMounth[date("m", strtotime($viewDate)) - 1];
+
+?>
+
 <section class="tariff" id="tariff">
     <div class="container">
         <div class="tariff__wrapper">
-            <h2 class="section-title tariff__title">Забирайте по лучшей цене до 27 ноября</h2>
+            <h2 class="section-title tariff__title">Забирайте по лучшей цене до <?php echo $viewDate; ?></h2>
             <div class="tariff__content">
                 <div class="tariff__cart">
                     <div class="cart__title">Интенсив <br> «Как построить личный бренд фэшн-фотографа»</div>
                     <ul class="cart__list">
                         <li class="list__item">
                             <div class="item__dot"></div>
-                            <div class="item__text">Три дня эфиров</div>
+                            <div class="item__text">3 эфира в записи</div>
                         </li>
                         <li class="list__item">
                             <div class="item__dot"></div>
-                            <div class="item__text">2 домашки с выборочными разборами</div>
+                            <div class="item__text">2 домашки</div>
                         </li>
                         <li class="list__item">
                             <div class="item__dot"></div>
@@ -42,7 +56,7 @@
                             <div class="path__number">1 475₽</div>
                         </div> -->
                         <div class="cart__prices">
-                            <div class="cart__newPrice">1500₽</div>
+                            <div class="cart__newPrice">2500₽</div>
                             <div class="cart__oldPrice">5900₽</div>
                         </div>
                     </div>

@@ -92,10 +92,10 @@ class Assets
             wp_enqueue_style('3-light-schemes-css', BUILD_CSS_URI . '/courses/3-light-schemes.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/3-light-schemes.css'), 'all');
         }
         if (is_page_template('courses/mk_baev_ss.php')) {
-            wp_enqueue_style('mk_baev_ss-css', BUILD_CSS_URI . '/courses/mk_baev_ss.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/mk_baev_ss.css'), 'all');
+            wp_enqueue_style('mkBaevSs-css', BUILD_CSS_URI . '/courses/mkBaevSs.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/mkBaevSs.css'), 'all');
         }
         if (is_page_template('courses/stan-feshn-fotografom.php')) {
-            wp_enqueue_style('stan-feshn-fotografom-css', BUILD_CSS_URI . '/courses/stan-feshn-fotografom.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/stan-feshn-fotografom.css'), 'all');
+            wp_enqueue_style('stanFeshnFotografom-css', BUILD_CSS_URI . '/courses/stanFeshnFotografom.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/stanFeshnFotografom.css'), 'all');
         }
     }
 

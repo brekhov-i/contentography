@@ -2,7 +2,7 @@
     <div class="container">
         <div class="courseThemes__wrapper">
             <h2 class="section-title courseThemes__title">Формат и программа</h2>
-            <div class="courseThemes__text">Три дня прямых эфиров от топового фотографа. <br> Интерактив и разбор домашних заданий</div>
+            <div class="courseThemes__text">Три эфира от топового фотографа.</div>
             <ul class="courseThemes__list">
                 <div class="list__line">
                     <svg width="2" height="477" viewBox="0 0 2 477" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,6 @@
                     <div class="item__number">1</div>
                     <div class="item__content">
                         <div class="item__title">Погружение в фэшн-индустрию</div>
-                        <div class="item__text">1й день: 28 ноября в 19:00 по мск</div>
                         <ul class="item__list">
                             <li>Разбор топовых проектов по фотографии, какие они бывают</li>
                             <li>Чем фэшн отличается от других жанров фотографии, и как в него попасть</li>
@@ -27,7 +26,6 @@
                     <div class="item__number">2</div>
                     <div class="item__content">
                         <div class="item__title">Как создавать съемки, которые будут востребованы у брендов</div>
-                        <div class="item__text">2й день: 29 ноября в 19:00 по мск</div>
                         <ul class="item__list">
                             <li>Примеры крутых съемок дома без бюджета</li>
                             <li>Как и зачем создавать продуманное творчество</li>
@@ -36,7 +34,6 @@
                             <li>Как подбирать моделей</li>
                             <li>Как делать мудборды, помогать клиентам и команде</li>
                             <li>Пример личного проекта Макса</li>
-                            <li>Разбор домашек</li>
                             <li>Домашнее задание</li>
                         </ul>
                     </div>
@@ -45,7 +42,6 @@
                     <div class="item__number">3</div>
                     <div class="item__content">
                         <div class="item__title">Путь развития фэшн-фотографа</div>
-                        <div class="item__text">3й день: 30 ноября в 19:00 по мск</div>
                         <ul class="item__list">
                             <li>Как быстрее войти в фэшн-фотографию</li>
                             <li>Какие подводные камни есть: что необходимо знать, какие методы существуют, какие навыки и знания нужны</li>
