@@ -1,0 +1,57 @@
+.oneClick {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #ffffff;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    min-width: 462px;
+    padding-right: 38px;
+    border-right: 3px solid #e0ded2;
+    margin-right: 38px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    strong {
+      font-weight: 500;
+    }
+  }
+  &__arrow {
+    display: none;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__wrapper {
+      position: relative;
+      flex-direction: column;
+    }
+    &__title {
+      min-width: 0;
+      padding-right: 0;
+      border-right: 0;
+      margin-right: 0;
+      margin-bottom: 102px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 26px;
+      strong {
+        font-weight: 500;
+      }
+    }
+    &__arrow {
+      display: block;
+      position: absolute;
+      top: 100px;
+      right: 15px;
+    }
+  }
+}

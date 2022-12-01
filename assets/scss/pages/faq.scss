@@ -1,0 +1,93 @@
+.faq {
+  width: 100%;
+  height: auto;
+  padding-top: 64px;
+  padding-bottom: 144px;
+  background-color: #e0ded2;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-family: "FiveYearsLater", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 63px;
+    color: #232323;
+    margin-bottom: 24px;
+  }
+  &__text {
+    max-width: 589px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__accordion {
+    width: 100%;
+    .accordion__list {
+      .accordion__content {
+        h3 {
+          font-family: "FiveYearsLater", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 26px;
+          line-height: 34px;
+          color: #232323;
+          margin-bottom: 16px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #171717;
+          &:not(:last-child) {
+            margin-bottom: 40px;
+          }
+        }
+        a {
+          font-weight: 500;
+          color: #f57b51;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding-top: 40px;
+    padding-bottom: 72px;
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 16px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__accordion {
+      .accordion__list {
+        .accordion__content {
+          h3 {
+            font-size: 16px;
+            line-height: 120%;
+            margin-bottom: 8px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            &:not(:last-child) {
+              margin-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

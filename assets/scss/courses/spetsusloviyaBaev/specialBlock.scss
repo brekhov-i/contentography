@@ -1,0 +1,545 @@
+.specialBlock {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #f57b51;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    position: relative;
+    color: #ffffff;
+    margin-bottom: 40px;
+    .offer {
+      min-width: 125px;
+      width: 125px;
+      height: 125px;
+      position: absolute;
+      right: -150px;
+      bottom: 0;
+      font-family: "FiveYearsLater", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 120%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      transform: rotate(9.45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      .text {
+        z-index: 2;
+      }
+    }
+  }
+  &__text {
+    max-width: 828px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    .cart {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 40px;
+      background-color: #ffffff;
+      border: 2px solid #de582a;
+      border-radius: 4px;
+      &__title {
+        width: 100%;
+        font-family: "FiveYearsLater", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 42px;
+        color: #171717;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #e8e8ee;
+      }
+      &__advantages {
+        width: 100%;
+        height: auto;
+        padding-bottom: 16px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        grid-gap: 10px 63px;
+        .list__item {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .item__icon {
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            margin-right: 8px;
+          }
+          .item__text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #171717;
+            strong {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      &__includes {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        .item {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+          a {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #171717;
+          }
+          span {
+            font-family: "FiveYearsLater", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #171717;
+          }
+          &:hover {
+            a {
+              text-decoration-line: underline;
+            }
+          }
+        }
+      }
+      &__bonus {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        background-color: rgba(245, 123, 81, 0.15);
+        border-radius: 4px;
+        padding: 16px;
+        .bonus__head {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 16px;
+          .bonus__icon {
+            min-width: 32px;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            background-color: #f57b51;
+            margin-right: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+          }
+          .bonus__title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #f57b51;
+            margin-bottom: 0;
+          }
+        }
+        .bonus__items {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .item {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            a {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #171717;
+            }
+            span {
+              font-family: "FiveYearsLater", sans-serif;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 20px;
+              color: #171717;
+            }
+            &:hover {
+              a {
+                text-decoration-line: underline;
+              }
+            }
+          }
+        }
+      }
+      &__price {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #e8e8ee;
+        .price__new {
+          font-family: "FiveYearsLater", sans-serif;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 42px;
+          color: #f57b51;
+          margin-right: 10px;
+        }
+        .price__old {
+          font-family: "FiveYearsLater", sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+          text-decoration-line: line-through;
+          color: #545862;
+        }
+      }
+      &__btn {
+        max-width: none;
+      }
+    }
+  }
+
+  &__sales {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 144px;
+
+    .sales__icon {
+      position: absolute;
+      top: -40px;
+      left: -36px;
+    }
+
+    .sales__textBlock {
+      min-width: 432px;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-right: 70px;
+    }
+
+    .sales__title {
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 42px;
+      color: #171717;
+      margin-bottom: 16px;
+    }
+
+    .sales__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #171717;
+    }
+
+    .sales__arrow {
+      position: relative;
+      width: 163px;
+      height: 110px;
+      margin-right: 70px;
+      svg {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .sales__timer {
+      width: auto;
+
+      .timer {
+        &__numbers {
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+
+        &-number {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #171717;
+          &:not(:last-child) {
+            margin-right: 12px;
+          }
+
+          .number {
+            font-family: "FiveYearsLater", sans-serif;
+            font-weight: 400;
+            font-size: 56px;
+            line-height: 63px;
+            color: #f57b51;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    padding-top: 96px;
+    &__title {
+      max-width: 230px;
+      margin-bottom: 8px;
+      .offer {
+        min-width: 86px;
+        width: 86px;
+        height: 86px;
+        right: -71px;
+        bottom: 92%;
+        font-size: 14px;
+        transform: rotate(11.54deg);
+      }
+    }
+    &__text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+    &__carts {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 24px;
+      .cart {
+        padding: 0;
+        padding-top: 16px;
+        padding-bottom: 24px;
+        &__title {
+          width: 100%;
+          font-size: 26px;
+          line-height: 34px;
+          text-align: center;
+        }
+        &__advantages {
+          padding: 0 16px;
+          padding-bottom: 16px;
+          margin-bottom: 10px;
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+          .list__item {
+            .item__icon {
+              margin-right: 6px;
+            }
+          }
+        }
+        &__includes {
+          margin-bottom: 16px;
+          padding: 0 16px;
+          .item {
+            &:not(:last-child) {
+              margin-bottom: 16px;
+            }
+            a {
+              max-width: vmin(196);
+              font-size: 14px;
+              line-height: 20px;
+            }
+            span {
+              width: auto;
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
+        &__bonus {
+          width: calc(100% - 32px);
+          margin: 0 16px;
+          margin-bottom: 10px;
+          .bonus__head {
+            .bonus__icon {
+              min-width: 28px;
+              width: 28px;
+              height: 28px;
+              margin-right: 12px;
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+          .bonus__items {
+            .item {
+              &:not(:last-child) {
+                margin-bottom: 16px;
+              }
+              a {
+                max-width: vmin(170);
+                font-size: 14px;
+                line-height: 20px;
+              }
+              span {
+                width: auto;
+                font-size: 14px;
+                line-height: 18px;
+              }
+            }
+          }
+        }
+        &__price {
+          margin-bottom: 24px;
+          padding: 0 16px;
+          padding-top: 24px;
+        }
+        &__btn {
+          max-width: none;
+          width: calc(100% - 32px);
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &__sales {
+      padding: 40px 16px;
+      padding-top: 68px;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .sales__icon {
+        left: 0;
+      }
+
+      .sales__textBlock {
+        margin-right: 0;
+        margin-bottom: 16px;
+        min-width: 0;
+      }
+
+      .sales__title {
+        font-size: 32px;
+        line-height: 42px;
+      }
+
+      .sales__text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .sales__arrow {
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        transform: translate(-50%);
+        grid-row: 1;
+        width: 70px;
+        height: 100px;
+        margin: 0 auto;
+        svg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: 10px;
+        }
+      }
+
+      .sales__timer {
+        width: auto;
+        margin: 0 auto;
+
+        .timer {
+          &__numbers {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+
+          &-number {
+            font-size: 16px;
+            line-height: 24px;
+
+            .number {
+              font-size: 40px;
+              line-height: 42px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

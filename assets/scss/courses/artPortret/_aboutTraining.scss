@@ -1,0 +1,150 @@
+.aboutTraining {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #cde3ff;
+  .linkScroll{
+    max-width: 467px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__accordion {
+    width: 100%;
+    height: auto;
+    .accordion__list {
+      .accordion {
+        &.open {
+          .accordion__control {
+            
+            border-radius: 4px 4px 0 0;
+          }
+          .accordion__content {
+            padding: 24px 48px 0 56px;
+          }
+        }
+        &__control {
+          border-radius: 4px;
+        }
+        &__title {
+          font-size: 28px;
+          line-height: 42px;
+        }
+        &__content {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding: 0 48px 0 56px;
+          border-radius: 0 0 4px 4px;
+          p {
+            margin-right: 40px;
+          }
+          picture {
+            min-width: 418px;
+            width: 418px;
+            height: 100%;
+          }
+        }
+        &:nth-child(1) {
+          .accordion__content {
+            picture {
+              margin-bottom: -10px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .accordion__content {
+            picture {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        &:nth-child(3) {
+          .accordion__content {
+            picture {
+              margin-bottom: -10px;
+            }
+          }
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+          .accordion__content {
+            picture {
+              margin-bottom: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__accordion {
+      .accordion__list {
+        .accordion {
+          &.open {
+            .accordion__content {
+              padding: 24px 16px;
+            }
+          }
+          &__control {
+            border-radius: 4px;
+          }
+          &__title {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          &__content {
+            display: flex;
+            flex-direction: column;
+            padding: 0 16px;
+            padding-bottom: 0;
+            p {
+              margin-right: 0;
+              padding-bottom: 16px;
+            }
+            picture {
+              min-width: 0;
+              width: auto;
+              height: auto;
+            }
+          }
+          &:nth-child(2) {
+            .accordion__content {
+              picture {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          &:nth-child(1), &:nth-child(3) {
+            .accordion__content {
+              padding-bottom: 0;
+            }
+          }
+          &:nth-child(4),
+          &:nth-child(5) {
+            .accordion__content {
+              picture {
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,198 @@
+.advantages {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 40px;
+    .cart {
+      width: 550px;
+      height: auto;
+      padding: 24px 55px;
+      border: 2px solid $colorPrimary;
+      border-radius: 4px;
+      &:last-child {
+        border-color: #6ea349;
+      }
+      &__list {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .list__title {
+          font-family: "FiveYearsLater", sans-serif;
+          font-weight: normal;
+          font-size: 26px;
+          line-height: 34px;
+          color: #171717;
+          margin-bottom: 24px;
+        }
+        .list__item {
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+          .item__icon {
+            min-width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            margin-right: 8px;
+          }
+          .item__text {
+            font-size: 18px;
+            line-height: 26px;
+            color: #171717;
+          }
+        }
+      }
+    }
+  }
+  &__offer {
+    width: 100%;
+    height: 298px;
+    background-color: #bed5ae;
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    .offer__content {
+      margin-right: 44px;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 64px;
+      padding-right: 0;
+    }
+    .offer__title {
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 34px;
+      color: #171717;
+      margin-bottom: 16px;
+    }
+    .offer__text {
+      font-size: 18px;
+      line-height: 26px;
+      color: #171717;
+    }
+    .offer__image {
+      min-width: 460px;
+      height: 100%;
+    }
+  }
+  &__btn {
+    width: 467px;
+    border-radius: 4px;
+    align-self: center;
+    margin-bottom: 144px;
+  }
+  &__content {
+    position: relative;
+    width: 680px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .content__title {
+      font-size: 26px;
+      line-height: 34px;
+      margin-bottom: 24px;
+    }
+    .content__text {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .content__arrow {
+      position: absolute;
+      top: 100%;
+      right: calc(0% - 73px);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    padding-bottom: 136px;
+    &__carts {
+      flex-direction: column;
+      .cart {
+        width: 100%;
+        padding: 16px;
+        &__title {
+          font-size: 24px;
+          line-height: 31px;
+          margin-bottom: 16px;
+        }
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__offer {
+      flex-direction: column;
+      height: auto;
+      .offer__image {
+        min-width: 0;
+        width: 100%;
+      }
+      .offer__content {
+        padding: 16px;
+        padding-bottom: 24px;
+        margin: 0;
+      }
+      .offer__title {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 16px;
+      }
+      .offer__text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &__btn {
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+      .content__title {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 16px;
+      }
+      .content__text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .content__arrow {
+        position: absolute;
+        top: 100%;
+        right: 0;
+      }
+    }
+  }
+}

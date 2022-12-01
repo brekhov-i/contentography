@@ -1,0 +1,440 @@
+{
+    "key": "group_6366ba90efcb6",
+    "title": "Параметры курса",
+    "fields": [
+        {
+            "key": "field_6366ba917f27a",
+            "label": "Автор курса",
+            "name": "author_course",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "experts"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_636ba5127025f",
+            "label": "Участие в акции",
+            "name": "participationInPromotions",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6366bbf65c9a7",
+            "label": "Карточка",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_6366bc325c9a9",
+            "label": "Видимость",
+            "name": "view_cart",
+            "type": "true_false",
+            "instructions": "Переключатель, отвечающий за видимость карточки курса на страницах сайта",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Отображена карточка на сайте?",
+            "default_value": 0,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет",
+            "ui": 1
+        },
+        {
+            "key": "field_6366bc095c9a8",
+            "label": "Изображение курса",
+            "name": "image_course",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6366bc325c9a9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, jpg, jpeg, webp",
+            "preview_size": "full"
+        },
+        {
+            "key": "field_6366bcc95c9aa",
+            "label": "Описание в карточке",
+            "name": "description_in_cart",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6366bc325c9a9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_637ca05db1e73",
+            "label": "Число или строка",
+            "name": "number_or_string",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Число",
+            "ui_off_text": "Строка",
+            "ui": 1
+        },
+        {
+            "key": "field_6366bcfdd8b7d",
+            "label": "Количество человек, прошедших курс",
+            "name": "count_people",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6366bc325c9a9",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_637ca05db1e73",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": 0,
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_637ca089b1e74",
+            "label": "Текстовое поле количества человек",
+            "name": "string_count_people",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_637ca05db1e73",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6366bc325c9a9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63677759c1ee8",
+            "label": "Карточки тарифов",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_636778feab7a8",
+            "label": "Тарифы",
+            "name": "tariffs",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Добавить",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63677777c1ee9",
+                    "label": "Заголовок карточки",
+                    "name": "cart__title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_636778feab7a8"
+                },
+                {
+                    "key": "field_63677793c1eea",
+                    "label": "Описание тарифа",
+                    "name": "cart__desc",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "delay": 1,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "parent_repeater": "field_636778feab7a8"
+                },
+                {
+                    "key": "field_636777ddc1eec",
+                    "label": "Цена со скидкой",
+                    "name": "discount_price",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_636778feab7a8"
+                },
+                {
+                    "key": "field_636777b2c1eeb",
+                    "label": "Цена полная",
+                    "name": "full_price",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": 0,
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_636778feab7a8"
+                },
+                {
+                    "key": "field_6367781bab7a5",
+                    "label": "Цена по частям",
+                    "name": "price_path",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Показывать на сайте цену по частям",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_636778feab7a8"
+                },
+                {
+                    "key": "field_6367786fab7a6",
+                    "label": "Цена рассрочки",
+                    "name": "price_installment",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Показывать на сайте цену рассрочки?",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 0,
+                    "parent_repeater": "field_636778feab7a8"
+                },
+                {
+                    "key": "field_636778acab7a7",
+                    "label": "Срок рассрочки",
+                    "name": "installment_period",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6367786fab7a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": 0,
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "Укажите период на сколько доступна рассрочка",
+                    "append": "",
+                    "parent_repeater": "field_636778feab7a8"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "p"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "author"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1669112896
+}

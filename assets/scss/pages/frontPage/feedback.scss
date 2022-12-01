@@ -1,0 +1,74 @@
+.feedback {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__text {
+    max-width: 753px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__videos {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    .videoWrapper {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 34px;
+        color: #171717;
+        opacity: 0.75;
+        margin-bottom: 16px;
+      }
+      &__video {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      max-width: 300px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+    &__videos {
+      grid-template-columns: repeat(1, 1fr);
+      .videoWrapper {
+        &__title {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

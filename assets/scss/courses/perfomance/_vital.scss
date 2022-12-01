@@ -1,0 +1,121 @@
+.vital {
+  width: 100%;
+  height: auto;
+  background-color: #e0ded2;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+    max-width: 668px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 40px;
+    margin-bottom: 64px;
+    .cart {
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 24px 40px;
+      &__icon {
+        min-width: 58px;
+        height: 58px;
+        margin-right: 24px;
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: #171717;
+      }
+    }
+  }
+  &__offer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+    .offer__arrow {
+      width: auto;
+      position: absolute;
+      right: calc(100% + 25px);
+      bottom: calc(100% - 43px);
+    }
+    .offer__title {
+      font-size: 26px;
+      line-height: 34px;
+      margin-right: 32px;
+      margin-bottom: 0;
+      max-width: 340px;
+    }
+    .offer__text {
+      border-left: 3px solid #c4c4c4;
+      padding: 12px 0;
+      padding-left: 32px;
+    }
+  }
+  &__btn {
+    align-self: center;
+    width: 467px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+      max-width: none;
+      width: 100%;
+    }
+    &__carts {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px 0;
+      .cart {
+        flex-direction: column;
+        padding: 16px;
+        &__icon {
+          margin-bottom: 16px;
+          margin-right: 0;
+        }
+        &__text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+    &__offer {
+      flex-direction: column;
+      .offer__arrow {
+        display: none;
+      }
+      .offer__title {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 24px;
+        margin-right: 0;
+        max-width: none;
+      }
+      .offer__text {
+        border-left: 0;
+        padding: 0;
+      }
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}

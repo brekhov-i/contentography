@@ -1,0 +1,97 @@
+.photoStudents {
+  width: 100%;
+  height: auto;
+  padding-top: 144px;
+  flex-direction: column;
+  &__head {
+    width: 100%;
+    padding-left: max(10px, (100% - 1160px) / 2);
+    padding-right: max(10px, (100% - 1160px) / 2);
+    margin-bottom: 40px;
+  }
+  &__title {
+    max-width: 703px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+  }
+}
+
+//gallary
+
+.gallary {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, auto);
+  gap: 8px;
+  picture {
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(9),
+    &:nth-child(10) {
+      grid-row: span 3;
+    }
+    &:nth-child(8),
+    &:nth-child(7) {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    &:nth-child(8) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &:nth-child(9) {
+      grid-column: 3;
+      grid-row-start: 6;
+      grid-row-end: 9;
+    }
+    &:nth-child(10) {
+      grid-column: 4;
+      grid-row-start: 6;
+      grid-row-end: 9;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    padding: 0 10px;
+    picture {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10) {
+        grid-row: auto;
+        grid-column: auto;
+      }
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10) {
+        display: none;
+      }
+    }
+  }
+}

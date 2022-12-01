@@ -1,0 +1,88 @@
+.counter {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #ffffff;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 868px;
+    margin-bottom: 40px;
+  }
+  &__numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 140px;
+    .number {
+      max-width: 285px;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &__text {
+        font-size: 24px;
+        line-height: 31px;
+        span {
+          width: 100%;
+          font-family: "FiveYearsLater", sans-serif;
+          font-weight: 400;
+          font-size: 77px;
+          line-height: 75px;
+          color: #f57b51;
+          margin-right: 3px;
+          margin-bottom: 16px;
+        }
+        strong {
+          font-weight: 500;
+          color: #f57b51;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 32px;
+    }
+    &__numbers {
+      grid-template-columns: 1fr;
+      grid-gap: 32px 0;
+      .number {
+        max-width: 300px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+          span {
+            width: auto;
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 0;
+            margin-right: 0;
+          }
+          strong {
+            font-size: 32px;
+            line-height: 42px;
+          }
+        }
+      }
+    }
+  }
+}

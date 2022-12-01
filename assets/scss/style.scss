@@ -1,0 +1,99 @@
+/*!
+Theme Name: Contentography
+Author: Ilya Brekhov
+Description: 
+Version: 1.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: contentography
+*/
+
+@import "./function";
+@import "./mixins";
+@import "./vendors";
+@import "./fonts";
+@import "./vars";
+
+$body-bg: #ffffff;
+$container: 1200px;
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: $colorWhite;
+  font: $defaultFont;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+figure,
+picture,
+img,
+video {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  max-width: $container;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media screen and (max-width: 576px) {
+    padding: 0 10px;
+  }
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.block-menu__icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .icons {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

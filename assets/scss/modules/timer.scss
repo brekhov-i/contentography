@@ -1,0 +1,73 @@
+.timer {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__date {
+    width: auto;
+    height: auto;
+    margin-bottom: 16px;
+    font-family: $titleFont;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    color: #171717;
+  }
+  &__numbers {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &-number {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    &:not(:last-child) {
+      margin-right: 23px;
+    }
+    .number {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 63px;
+      color: $colorPrimary;
+    }
+    &.disabled {
+      color: $colorGrey;
+      .number {
+        color: $colorGrey;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__date {
+      margin-bottom: 8px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &-number {
+      font-size: 12px;
+      line-height: 16px;
+      color: #171717;
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+      .number {
+        font-size: 34px;
+        line-height: 40px;
+      }
+    }
+  }
+}

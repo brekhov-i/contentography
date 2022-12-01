@@ -1,0 +1,103 @@
+.testDrive {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: $colorWhite;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 73px;
+    .content__left {
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .content__mainText {
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 42px;
+      color: $colorBlack;
+      margin-bottom: 33px;
+      span {
+        color: $colorPrimary;
+      }
+    }
+    .content__right {
+      width: 50%;
+    }
+    .content__text {
+      font-size: 24px;
+      line-height: 31px;
+      color: $colorBlack;
+      margin-bottom: 40px;
+    }
+    .content__btn {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &__content {
+      position: relative;
+      flex-direction: column;
+      .content__left,
+      .content__right {
+        width: 100%;
+        position: relative;
+      }
+      .content__arrow {
+        position: absolute;
+        top: 170%;
+        right: 100px;
+      }
+      .content__text {
+        margin-bottom: 88px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__content {
+      .content__left {
+        margin-bottom: 16px;
+      }
+      .content__mainText {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0;
+      }
+      .content__text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 88px;
+      }
+      .content__arrow {
+        top: 210%;
+        right: 0;
+      }
+      .content__btn {
+        padding: 18px 0;
+      }
+    }
+  }
+}

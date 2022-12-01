@@ -1,0 +1,76 @@
+.testDrive {
+  width: 100%;
+  height: auto;
+  background-color: #a4c6f1;
+  padding-top: 31px;
+  overflow: hidden;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-gap: 23px 0;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 113px;
+    padding-bottom: 144px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    max-width: 467px;
+  }
+  &__image {
+    width: auto;
+    height: 100%;
+    img {
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 72px;
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+    &__content {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+    &__btn {
+      width: 100%;
+      max-width: 467px;
+    }
+    &__image {
+      width: 120%;
+      height: auto;
+      transform: translateX(-7%);
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.blockWithPhoto {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 144px;
+  background-color: #171717;
+  padding-bottom: 453px;
+  overflow: hidden;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 744px;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+  &__text {
+    max-width: 660px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+  &__bgImg {
+    width: 204%;
+    max-width: 3000px;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 72px;
+    padding-bottom: 1087px;
+    &__title {
+      max-width: 744px;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__bgImg {
+      width: 187%;
+      max-width: 598px;
+      top: 28%;
+      left: 55%;
+      transform: translateX(-50%);
+    }
+  }
+}

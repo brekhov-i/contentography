@@ -1,0 +1,13 @@
+.callbackHelp {
+  &__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  @media screen and (max-width: 576px) {
+    &__title {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}

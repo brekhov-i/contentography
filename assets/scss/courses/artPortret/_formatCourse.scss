@@ -1,0 +1,152 @@
+.formatCourse {
+  width: 100%;
+  height: auto;
+  padding-top: 144px;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 536px 1fr;
+    grid-gap: 0 106px;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    padding-bottom: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .list__item {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .item__icon {
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+      }
+      .item__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .item__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        color: #171717;
+        margin-bottom: 16px;
+      }
+      .item__list {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .list__item {
+          display: block;
+          position: relative;
+          padding-left: 8px;
+          font-size: 16px;
+          line-height: 24px;
+          color: #171717;
+          strong {
+            font-weight: 500;
+          }
+          &::after {
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            position: absolute;
+            top: 12.5px;
+            left: 0;
+            content: "";
+            background-color: #171717;
+          }
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+      .item__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #171717;
+      }
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 0;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding-top: 72px;
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-gap: 24px 0;
+    }
+    &__content {
+      padding-bottom: 0;
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+    &__list {
+      .list__item {
+        .item__title {
+          font-size: 22px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    &__image {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      height: vmin(310);
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.sectionWithVideo {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #fff;
+
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 532px 1fr;
+    grid-gap: 0 40px;
+  }
+
+  &__textBlock {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__mainText {
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    color: #171717;
+    margin-bottom: 16px;
+  }
+
+  &__subText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #171717;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      grid-gap: 24px 0;
+    }
+    &__mainText {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    &__subText {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+

@@ -1,0 +1,24 @@
+.btn--default {
+  width: auto;
+  height: auto;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "ObjectSans", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: $colorPrimary;
+  border-radius: 4px;
+}
+.btn--windowUp {
+  width: 61px;
+  height: 61px;
+  border-radius: 100%;
+  background-color: $colorBlack;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

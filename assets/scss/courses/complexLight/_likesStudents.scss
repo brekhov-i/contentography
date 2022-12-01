@@ -1,0 +1,123 @@
+.likesStudents {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #ffffff;
+
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    max-width: 560px;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    .list__item {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0 46px;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      .item__break {
+        position: absolute;
+
+        svg {
+          width: 100%;
+        }
+
+        &:first-child {
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: auto;
+        }
+
+        &:last-child {
+          bottom: 0;
+          right: 0;
+          width: 30px;
+          height: auto;
+        }
+      }
+
+      .item__text {
+        font-size: 20px;
+        line-height: 29px;
+        color: #171717;
+
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 467px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+
+    &__title {
+      max-width: 560px;
+      margin-bottom: 24px;
+    }
+
+    &__list {
+
+      .list__item {
+        padding: 0 21px;
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+
+        .item__break {
+
+          &:first-child {
+            width: 17px;
+            top: -5px;
+          }
+
+          &:last-child {
+            width: 17px;
+            bottom: -5px;
+          }
+        }
+
+        .item__text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+    &__btn {
+      max-width: 467px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "./function";
+@import "./mixins";
+@import "./vars";
+@import "./vendors";
+
+@import "./components/breadcrumbs.scss";
+@import "./components/buttons.scss";
+@import "./components/cartCourse.scss";
+@import "./components/cartExpert.scss";
+@import "./components/cartPost.scss";
+@import "./components/typography.scss";
+@import "./components/nav.scss";
+@import "./components/slider-category.scss";
+
+@import "./modules/accordion.scss";
+@import "./modules/callbackHelp.scss";
+@import "./modules/baners.scss";
+@import "./modules/footer.scss";
+@import "./modules/header.scss";
+@import "./modules/modals.scss";
+@import "./modules/openAllCarts.scss";
+@import "./modules/accordion.scss";
+@import "./modules/sliderFrameOnCoursePage.scss";
+@import "./modules/timer.scss";
+@import "./modules/video.scss";
+@import "./modules/formComponents/checkbox.scss";
+@import "./modules/formComponents/rangeSlider.scss";
+@import "./modules/courses.scss";

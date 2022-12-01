@@ -1,0 +1,179 @@
+.students {
+  width: 100%;
+  height: auto;
+  background-color: #e0ded2;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 786px;
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    .cart {
+      width: 100%;
+      height: auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 470px 1fr;
+      grid-gap: 0 40px;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      &__content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      &__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: #171717;
+        margin-bottom: 16px;
+      }
+      &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #171717;
+        margin-bottom: 16px;
+      }
+      &__author {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .author__image {
+          min-width: 46px;
+          width: 46px;
+          height: 46px;
+          border-radius: 100%;
+          margin-right: 16px;
+          picture,
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .author__id {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #171717;
+        }
+      }
+      &__images {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+        .images__before,
+        .images__after {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          overflow: hidden;
+          picture,
+          img {
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .frame {
+            position: absolute;
+            z-index: 2;
+            left: 16px;
+            bottom: 16px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            padding: 4px 24px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #171717;
+            strong {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .openAllCarts__btn {
+      background-color: #171717;
+      color: #ffffff;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      max-width: 786px;
+      margin-bottom: 24px;
+    }
+    &__carts {
+      .cart {
+        padding: 32px 16px;
+        grid-template-columns: 1fr;
+        grid-gap: 32px 0;
+        &__title {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        &__text {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 24px;
+        }
+        &__author {
+          .author__image {
+            margin-right: 6px;
+          }
+        }
+        &__images {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 16px;
+          .images__before,
+          .images__after {
+            height: auto;
+            picture,
+            img {
+              max-width: none;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+            .frame {
+              left: 8px;
+              bottom: auto;
+              top: 8px;
+              padding: 4px 21px;
+            }
+          }
+        }
+      }
+      .openAllCarts__btn {
+        background-color: transparent;
+        color: #171717;
+      }
+    }
+  }
+}

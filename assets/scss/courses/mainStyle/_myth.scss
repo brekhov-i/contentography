@@ -1,0 +1,19 @@
+.myth {
+  width: 100%;
+  height: auto;
+  background-color: #f4f3ee;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+  }
+  &__slider {
+    .slider-slide {
+      width: 260px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+  }
+}

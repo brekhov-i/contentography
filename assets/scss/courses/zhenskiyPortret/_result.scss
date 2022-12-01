@@ -1,0 +1,100 @@
+.result {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #fff;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 146px;
+    .list__col {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .list__item {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+          padding-bottom: 16px;
+          border-bottom: 1px solid #f4f3ee;
+        }
+        .item__dot {
+          min-width: 8px;
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background-color: #f57b51;
+          margin-top: 8px;
+          margin-right: 9px;
+        }
+        .item__text {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #171717;
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    display: none;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__list {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+      margin-bottom: 40px;
+      .list__col {
+        &:first-child {
+          .list__item {
+            &:last-child {
+              padding-bottom: 16px;
+              border-bottom: 1px solid #f4f3ee;
+            }
+          }
+        }
+        .list__item {
+          .item__text {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    &__btn {
+      display: flex;
+      max-width: 467px;
+    }
+  }
+}

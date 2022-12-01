@@ -1,0 +1,421 @@
+.tariff {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #bed5ae;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__head {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__timerWrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 42px;
+    border-left: 3px solid #ffffff;
+    .timer__title {
+      font-family: "FiveYearsLater", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 42px;
+      color: #171717;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 16px;
+      .number {
+        margin-left: 10px;
+      }
+    }
+    .timer {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &__day,
+      &__hours,
+      &__minutes,
+      &__seconds {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #171717;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:not(:last-child) {
+          margin-right: 23px;
+        }
+        .number {
+          font-family: "FiveYearsLater", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 63px;
+          color: #f57b51;
+        }
+        &.disabled {
+          .number {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    max-width: 560px;
+    font-family: "FiveYearsLater", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 40px;
+    .cart {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: #ffffff;
+      border-radius: 4px;
+      padding: 40px;
+      &__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 42px;
+        color: #171717;
+        margin-bottom: 24px;
+      }
+      &__list {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 18px;
+        padding-bottom: 26px;
+        border-top: 2px solid #e8e8ee;
+        margin-bottom: auto;
+        .list__item {
+          position: relative;
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-left: 16px;
+          &::before {
+            background-color: #f57b51;
+            border-radius: 100%;
+            content: "";
+            height: 8px;
+            left: 0;
+            position: absolute;
+            top: 8px;
+            width: 8px;
+          }
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+          .item__text {
+            font-size: 16px;
+            line-height: 24px;
+            color: #171717;
+            strong {
+              font-weight: 500;
+            }
+          }
+          .item__list {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10px;
+            list-style: disc;
+            margin-left: 16px;
+            .list__item {
+              width: 100%;
+              height: auto;
+              font-size: 16px;
+              line-height: 24px;
+              padding-left: 0;
+              display: revert;
+              &::marker {
+                font-size: 10px;
+              }
+              &::before {
+                display: none;
+              }
+              &:not(:last-child) {
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+      &__priceBlock {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 184px 210px;
+        grid-gap: 16px 86px;
+        margin-bottom: 24px;
+        border-top: 2px solid #e8e8ee;
+        margin-top: 24px;
+        padding-top: 24px;
+        .price__forPath,
+        .price__installments,
+        .price__finish {
+          width: auto;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .price__text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #545862;
+            margin-bottom: 4px;
+            span {
+              color: #f57b51;
+            }
+          }
+          .price__sum {
+            font-family: "FiveYearsLater", sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 42px;
+            color: #171717;
+            span {
+              color: #f57b51;
+            }
+          }
+        }
+        .price__forPath {
+          grid-row: 2;
+          max-width: 156px;
+        }
+        .price__finish {
+          justify-self: end;
+          .price__sum {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            .sum__new {
+              font-size: 26px;
+              line-height: 34px;
+              margin-right: 16px;
+              color: #171717;
+              span {
+                color: #171717;
+              }
+            }
+            .sum__old {
+              font-size: 18px;
+              line-height: 34px;
+              text-decoration-line: line-through;
+              color: #545862;
+            }
+          }
+        }
+        .price__installments {
+          max-width: 210px;
+        }
+      }
+      &__btn {
+        width: 100%;
+        height: auto;
+        padding: 18px 0;
+        background-color: #f57b51;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__head {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    &__timerWrapper {
+      padding-left: 16px;
+      border-left: 2px solid #ffffff;
+      .timer__title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        .number {
+          margin-left: 8px;
+        }
+      }
+      .timer {
+        &__day,
+        &__hours,
+        &__minutes,
+        &__seconds {
+          font-size: 12px;
+          line-height: 16px;
+          &:not(:last-child) {
+            margin-right: 4px;
+          }
+          .number {
+            font-size: 34px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 16px;
+    }
+    &__desc {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+    &__carts {
+      grid-template-columns: 1fr;
+      grid-gap: 24px 0px;
+      .cart {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #ffffff;
+        border-radius: 4px;
+        padding: 0;
+        grid-gap: 0;
+        &__title {
+          font-family: "FiveYearsLater", sans-serif;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 42px;
+          color: #171717;
+          margin: 24px 16px;
+          margin-bottom: 24px;
+        }
+        &__list {
+          padding: 16px;
+          padding-bottom: 24px;
+          .list__item {
+            .item__text {
+              font-size: 14px;
+              line-height: 20px;
+            }
+            .item__list {
+              margin-top: 5px;
+              margin-left: 8px;
+              list-style: disc;
+              .list__item {
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+        &__priceBlock {
+          grid-template-columns: 1fr;
+          grid-gap: 0;
+          padding: 0 16px;
+          padding-top: 24px;
+          .price__forPath {
+            max-width: none;
+            margin-bottom: 0;
+            margin-top: 14px;
+          }
+          .price__finish {
+            grid-row: auto;
+            margin-bottom: 0;
+            justify-self: start;
+            margin-top: 32px;
+            .price__sum {
+              .sum__new {
+                font-size: 22px;
+                line-height: 27px;
+                margin-right: 16px;
+              }
+              .sum__old {
+                font-size: 16px;
+                line-height: 24px;
+                text-decoration-line: line-through;
+                color: #545862;
+              }
+            }
+          }
+          .price__installments {
+            max-width: 210px;
+          }
+        }
+        &__btn {
+          width: 100%;
+          height: auto;
+          padding: 18px 0;
+          background-color: #f57b51;
+          border-radius: 4px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 130%;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

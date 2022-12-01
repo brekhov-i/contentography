@@ -1,0 +1,20 @@
+.sectionWithVideo {
+  background-color: #f7f2ff;
+  &__wrapper {
+    border: 2px solid #caaaf3;
+  }
+  &__list {
+    .list__item {
+      font-size: 14px;
+      line-height: 20px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    &__wrapper {
+      border: none;
+    }
+  }
+}

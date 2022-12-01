@@ -1,0 +1,207 @@
+.cartPost {
+  position: relative;
+  width: 100%;
+  height: auto;
+  &.cartPost--big {
+    overflow: hidden;
+    border-radius: 4px;
+    .cartPost__content {
+      padding: 32px;
+
+      justify-content: space-between;
+    }
+    .cartPost__image {
+      width: 100%;
+      height: auto;
+      picture,
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .cartPost__title {
+      font-size: 26px;
+      line-height: 34px;
+    }
+    .cartPost__view {
+      color: #ffffff;
+      svg {
+        fill: #ffffff;
+      }
+    }
+  }
+  &:hover {
+    .cartPost__linkEditWrapper {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.5s all ease-in-out;
+    }
+  }
+  &__linkEditWrapper {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    padding: 15px 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #171717;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+  }
+  &__linkEdit {
+    color: #f57b51;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__image {
+    width: 100%;
+    height: 154px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    picture,
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  &__tags {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-right: 24px;
+    grid-gap: 4px;
+    .tag {
+      width: auto;
+      height: auto;
+      padding: 4px 10px;
+      background: #ffffff;
+      border: 1px solid #f5f5f7;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      color: #171717;
+    }
+  }
+  &__view {
+    width: 49px;
+    height: auto;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #6d7078;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4px;
+    svg {
+      min-width: 16px;
+      width: 16px;
+      height: 12px;
+      margin-right: 8px;
+      fill: #6d7078;
+    }
+  }
+  &__title {
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #171717;
+  }
+
+  @media screen and (max-width: 576px) {
+    &.cartPost--big {
+      .cartPost__content {
+        padding: 24px 16px;
+      }
+      .cartPost__image {
+        margin: 55px 0;
+      }
+      .cartPost__title {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+    &__image {
+      width: 100%;
+      height: 154px;
+      margin-bottom: 16px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      picture,
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__info {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    &__tags {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-right: 24px;
+      grid-gap: 4px;
+      .tag {
+        width: auto;
+        height: auto;
+        padding: 4px 10px;
+        background: #ffffff;
+        border: 1px solid #f5f5f7;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #171717;
+      }
+    }
+    &__title {
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #171717;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.plus {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #dae8d0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-gap: 0 60px;
+  }
+  &__image {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: center;
+    .list__item {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      .item__icon {
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        margin-right: 8px;
+      }
+      .item__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #171717;
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__content {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 24px;
+    }
+    &__image {
+      grid-row: 2;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__list {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-self: center;
+      .list__item {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+        .item__icon {
+          min-width: 24px;
+          width: 24px;
+          height: 24px;
+          border-radius: 100%;
+          margin-right: 8px;
+        }
+        .item__text {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #171717;
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

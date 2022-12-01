@@ -1,0 +1,365 @@
+.spikers {
+  width: 100%;
+  height: auto;
+  background-color: $colorGreen;
+  padding: 144px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    padding-left: max(10px, (100% - 1160px) / 2);
+    padding-right: max(10px, (100% - 1160px) / 2);
+    margin-bottom: 144px;
+  }
+
+  &__title {
+    margin-bottom: 49px;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .spiker {
+      &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #ffffff;
+        border-radius: 259px 4px 4px 4px;
+        left: -25px;
+        top: -25px;
+      }
+      &__wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        border-radius: 259px 4px 4px 4px;
+        padding-top: 64px;
+        padding-left: 64px;
+        padding-right: 64px;
+        display: grid;
+        grid-template-columns: 509px 1fr;
+        gap: 0 33px;
+      }
+      &__image {
+        position: relative;
+        width: 100%;
+        height: 509px;
+        border-radius: 100%;
+        overflow: hidden;
+        align-self: center;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__textBlock {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 72px;
+      }
+      &__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 42px;
+        color: $colorBlack;
+        margin-bottom: 32px;
+      }
+      &__subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+        color: #000000;
+        margin-bottom: 24px;
+        a {
+          color: $colorPrimary;
+        }
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: #171717;
+        margin-bottom: 16px;
+      }
+      &__logos {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 27px 26px;
+        justify-content: center;
+        margin-top: 24px;
+        img {
+          justify-self: center;
+        }
+      }
+    }
+  }
+
+  &__portfolio {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &.spikers--withOther {
+    width: 100%;
+    .spikers__content {
+      margin-bottom: 112px;
+      .spiker {
+        &__bg {
+          display: none;
+        }
+        &__wrapper {
+          border-radius: 0;
+          padding: 0;
+        }
+        &__textBlock {
+          padding: 72px 0;
+          padding-right: 64px;
+        }
+        &__subtitle {
+          font-size: 24px;
+          line-height: 31px;
+          strong {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 31px;
+          }
+        }
+      }
+    }
+    .spikers__other {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 72px 40px;
+      .spikerCart {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        &__img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 32px;
+          border-radius: 500px;
+        }
+        &__content {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        &__name {
+          font-family: "FiveYearsLater", sans-serif;
+          font-size: 26px;
+          line-height: 34px;
+          color: $colorBlack;
+          margin-bottom: 16px;
+        }
+        &__desc {
+          font-size: 18px;
+          line-height: 26px;
+          color: $colorBlack;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 72px 0;
+    &__wrapper {
+      margin-bottom: 72px;
+    }
+    &__content {
+      .spiker {
+        &__textBlock {
+          padding: 30px;
+        }
+        &__bg {
+          border: 1px solid #ffffff;
+          border-radius: 32px 32px 0px 0px;
+          left: 7px;
+          top: -8px;
+        }
+        &__wrapper {
+          position: relative;
+          width: 100%;
+          height: auto;
+          background: #ffffff;
+          border-radius: 32px 32px 4px 4px;
+          padding: 0;
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 24px 0;
+        }
+        &__image {
+          display: flex;
+          justify-content: center;
+          img {
+            max-width: 70%;
+          }
+        }
+      }
+    }
+    &__portfolio {
+      .portfolio__title {
+        max-width: 153px;
+      }
+      .portfolio__slider {
+        .slider-slide {
+          width: 254px;
+          height: auto;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    &.spikers--withOther {
+      width: 100%;
+      .spikers__content {
+        margin-bottom: 112px;
+        .spiker {
+          &__wrapper {
+            padding: 72px 64px;
+          }
+          &__textBlock {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &.spikers--withOther {
+      .spikers__other {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__content {
+      .spiker {
+        &__logos {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px 27px;
+          justify-content: center;
+          margin-top: 12px;
+          img {
+            justify-self: center;
+          }
+        }
+      }
+    }
+    &.spikers--withOther {
+      width: 100%;
+      .spikers__content {
+        margin-bottom: 64px;
+        .spiker {
+          &__bg {
+            display: none;
+          }
+          &__wrapper {
+            border-radius: 0;
+            padding: 0;
+            flex-direction: column;
+          }
+          &__image {
+            width: 100%;
+            img {
+              width: 100%;
+              max-width: none;
+            }
+          }
+          &__textBlock {
+            padding: 40px 16px;
+          }
+          &__subtitle {
+            font-size: 16px;
+            line-height: 24px;
+            strong {
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 31px;
+            }
+          }
+        }
+      }
+      .spikers__other {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px 0;
+        .spikerCart {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: row;
+          picture {
+            width: 100px;
+            height: 100%;
+          }
+          &__img {
+            width: 100px;
+            height: 100%;
+            margin-bottom: 32px;
+            border-radius: 0;
+          }
+          &__content {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: #ffffff;
+            padding: 24px 16px;
+          }
+          &__name {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 8px;
+          }
+          &__desc {
+            font-size: 13px;
+            line-height: 20px;
+          }
+          &:nth-child(2n) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+}

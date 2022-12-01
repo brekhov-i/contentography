@@ -1,0 +1,134 @@
+@import "../vars";
+@import "../function";
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 32px;
+  &__mobileBlock {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__logo {
+    min-width: 160px;
+    width: 160px;
+    height: 24px;
+    margin-right: 100px;
+    a {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__btnMenu {
+    display: none;
+  }
+  &__btnMenuOpen {
+    display: none;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    height: vmin(56);
+    justify-content: space-between;
+    padding: 0;
+    &__mobileBlock {
+      width: 100%;
+      height: auto;
+      background-color: $colorWhite;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1001;
+      padding: 19px 10px;
+      &.header__mobileBlock--logged {
+        &.absolute {
+          position: fixed;
+          top: 43px;
+        }
+      }
+      &.absolute {
+        position: fixed;
+        top: 0px;
+      }
+    }
+    &__logo {
+      min-width: vmin(130);
+      width: vmin(130);
+      height: auto;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__btnMenu {
+      width: vmin(24);
+      height: vmin(15);
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+      div {
+        display: flex;
+        width: 100%;
+        height: vmin(2.5);
+        background-color: #171717;
+        justify-self: end;
+        transition: 0.3s transform ease-in-out, 0.5s width ease-in-out;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:first-child {
+          max-width: 70%;
+        }
+        &:last-child {
+          max-width: 85%;
+        }
+        &:nth-child(2) {
+          transform: rotate(0) translate(0, 0);
+        }
+      }
+      &.active {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          width: 100%;
+          height: 2px;
+          max-width: none;
+          transition: 0.5s transform ease-in-out, 0.3s width ease-in-out;
+          &:first-child {
+            transform: rotate(45deg) translate(3px, 1.5px);
+          }
+          &:last-child {
+            transform: rotate(-45deg) translate(3.5px, -1.5px);
+          }
+          &:nth-child(2) {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #ffffff;
+            left: 50%;
+            top: 50%;
+            transform: rotate(45deg) translate(-27%, -60%);
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.btn {
+  width: 100%;
+  height: auto;
+  padding: 18px 0;
+  background-color: $colorPrimary;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #ffffff;
+  border-radius: 4px;
+  transition: 0.5s all ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
+  &:hover {
+    background-color: $colorBtnActive;
+    transition: 0.5s all ease-in-out;
+  }
+  &:disabled {
+    background-color: $colorGrey !important;
+    transition: 0.5s all ease-in-out;
+    cursor: default !important;
+  }
+}
+
+// Кнопки слайдера
+.slider-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background-color: $colorPrimary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 80%;
+    fill: #ffffff;
+  }
+  &.swiper-button-disabled {
+    background-color: $colorGrey;
+  }
+  @media screen and (max-width: 576px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  background-color: $colorWhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-left: 5px;
+    fill: $colorPrimary;
+  }
+}

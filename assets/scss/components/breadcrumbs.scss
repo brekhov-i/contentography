@@ -1,0 +1,50 @@
+.breadcrumbs {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+  &__link {
+    min-width: max-content;
+    font-size: 13px;
+    line-height: 18px;
+    color: #545862;
+  }
+  .separator {
+    font-size: 13px;
+    line-height: 8px;
+    color: #545862;
+    transform: rotate(180deg);
+    margin-top: 3px;
+    &:first-child {
+      display: none;
+    }
+    &:not(:first-child) {
+      margin-right: 4px;
+      margin-left: 4px;
+    }
+  }
+  &__thisPage {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    color: #171717;
+  }
+  @media screen and (max-width: 576px) {
+    .separator {
+      margin-top: 2px;
+      &:first-child {
+        display: block;
+        margin-right: 4px;
+        margin-left: 4px;
+        transform: rotate(0);
+      }
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+    &__thisPage {
+      display: none;
+    }
+  }
+}

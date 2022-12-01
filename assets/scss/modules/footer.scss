@@ -1,0 +1,275 @@
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f7;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 24px 84px;
+  }
+  &__line {
+    grid-row: 2;
+    grid-column: span 4;
+    width: 100%;
+    height: 1px;
+    background-color: #c4c4c4;
+  }
+  &__contactInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__logo {
+    width: 272px;
+    height: 40px;
+    margin-bottom: 32px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__contacts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__email,
+  &__phone,
+  &__address {
+    font-size: 16px;
+    line-height: 24px;
+    color: #171717;
+    margin-bottom: 8px;
+  }
+  &__phone {
+    position: relative;
+    &::before {
+      width: 0;
+      height: 1px;
+      border-bottom: 1px dotted #000;
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      transition: 0.5s width ease-in-out;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+        transition: 0.5s width ease-in-out;
+      }
+    }
+  }
+  &__address {
+    margin-bottom: 24px;
+  }
+  &__socLinks {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .socLink {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      svg {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s fill ease-in-out;
+        fill: #f57b51;
+      }
+      &:hover {
+        svg {
+          transition: 0.5s fill ease-in-out;
+          fill: #da6a44;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+  .menuCol {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &-title {
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31px;
+      color: #171717;
+      margin-bottom: 16px;
+    }
+    &-list {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .list__item {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        &::before {
+          width: 0;
+          height: 1px;
+          background-color: #f57b51;
+          content: "";
+          position: absolute;
+          top: auto;
+          bottom: -3px;
+          left: 0;
+          transition: 0.5s width ease-in-out;
+        }
+        .item__link {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #171717;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          strong {
+            font-weight: 500;
+          }
+          svg {
+            margin-left: 8px;
+            margin-top: 4px;
+            width: 20px;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+        &:hover {
+          &::before {
+            transition: 0.5s width ease-in-out;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__infoCompany,
+  &__linkPage {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 135%;
+    color: #171717;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 40px;
+    padding-bottom: 16px;
+    &__wrapper {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 0;
+    }
+    &__line {
+      display: none;
+    }
+    &__contactInfo {
+      margin-bottom: 40px;
+    }
+    &__logo {
+      width: 215px;
+      height: 32px;
+    }
+    &__email,
+    &__phone,
+    &__address {
+      font-size: 16px;
+      line-height: 140%;
+    }
+    &__socLinks {
+      .socLink {
+        width: 35px;
+        height: 35px;
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+    .menuCol {
+      margin-bottom: 24px;
+      &-title {
+        font-size: 18px;
+        line-height: 140%;
+        color: #171717;
+        margin-bottom: 8px;
+      }
+      &-list {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .list__item {
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .item__link {
+            font-size: 14px;
+            line-height: 135%;
+            strong {
+              font-weight: 500;
+            }
+            svg {
+              margin-left: 8px;
+              margin-top: 3px;
+              width: 20px;
+            }
+            &.allView {
+              margin-top: 8px;
+            }
+          }
+          &:not(:last-child) {
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+    &__infoCompany,
+    &__linkPage {
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 135%;
+      color: #171717;
+      margin-bottom: 8px;
+    }
+    &__infoCompany {
+      margin-top: 35px;
+    }
+  }
+}

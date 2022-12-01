@@ -1,0 +1,16 @@
+@import '../function';
+@import '../vars';
+
+section, footer {
+  display: flex;
+}
+
+@import './marathonBaevShooting/heroSection';
+@import './marathonBaevShooting/gift';
+@import './marathonBaevShooting/aboutCourse';
+@import './marathonBaevShooting/portfolio';
+@import './marathonBaevShooting/forWhom';
+@import './marathonBaevShooting/speaker';
+@import './marathonBaevShooting/whatWill';
+@import './marathonBaevShooting/schedule';
+@import './marathonBaevShooting/tariff';

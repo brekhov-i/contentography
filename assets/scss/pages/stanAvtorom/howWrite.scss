@@ -1,0 +1,268 @@
+.howWrite {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 750px;
+    margin-bottom: 40px;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-gap: 0 62px;
+    margin-bottom: 144px;
+    .content {
+      &__image {
+        width: 100%;
+        height: auto;
+        picture,
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__list {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .list__line {
+          position: absolute;
+          left: 13px;
+          top: 20px;
+          width: 3px;
+          height: 320px;
+          border-radius: 3px;
+          background-color: #f5f5f7;
+          .back {
+            width: 100%;
+            height: 30px;
+            background-color: #f57b51;
+          }
+        }
+        .list__item {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: relative;
+          z-index: 2;
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+          .item__dot {
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            background-color: #f57b51;
+            margin-right: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "FiveYearsLater", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #ffffff;
+            padding-top: 3px;
+          }
+          .item__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            strong {
+              font-weight: 500;
+            }
+            a {
+              font-weight: 500;
+              text-decoration-line: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__frame {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 560px 1fr;
+    grid-gap: 35px 40px;
+    margin-bottom: 144px;
+    .frame__title {
+      grid-row: 1;
+      grid-column: 1;
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 34px;
+      color: #171717;
+    }
+    .frame__arrow {
+      width: 100%;
+      height: auto;
+      grid-row: 2;
+      grid-column: 1;
+    }
+    .frame__text {
+      grid-column: 2;
+      grid-row: span 2;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #171717;
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+  &__baner {
+    width: 100%;
+    height: auto;
+    background-color: rgba(190, 213, 174, 0.4);
+    border: 2px solid #bed5ae;
+    border-radius: 4px;
+    padding: 24px 56px;
+    display: grid;
+    grid-template-columns: 435px 1fr;
+    grid-gap: 0 113px;
+    .baner__image {
+      width: 100%;
+      height: auto;
+    }
+    .baner__content {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-self: center;
+    }
+    .baner__title {
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 63px;
+      color: #171717;
+      margin-bottom: 16px;
+      span {
+        font-family: "ObjectSans", sans-serif;
+        font-weight: 500;
+      }
+    }
+    .baner__buttonBlock {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .buttonBlock__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+        color: #171717;
+        margin-bottom: 40px;
+      }
+      .buttonBlock__arrow {
+        position: absolute;
+        left: -63px;
+        top: 14px;
+        height: 90px;
+      }
+      .buttonBlock__btn {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      grid-gap: 33px;
+      margin-bottom: 72px;
+      .content {
+        &__list {
+          grid-row: 1;
+          .list__item {
+            .item__text {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    &__frame {
+      position: relative;
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      margin-bottom: 72px;
+      .frame__title {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 0;
+      }
+      .frame__arrow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        picture {
+          margin-right: vmin(20);
+        }
+      }
+      .frame__text {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 94px;
+      }
+    }
+    &__baner {
+      padding: 40px 16px;
+      grid-template-columns: 1fr;
+      grid-gap: 32px 0;
+      .baner__content {
+        grid-row: 1;
+      }
+      .baner__title {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      .baner__buttonBlock {
+        .buttonBlock__text {
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 32px;
+        }
+        .buttonBlock__arrow {
+          display: none;
+        }
+      }
+    }
+  }
+}

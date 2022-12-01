@@ -1,0 +1,121 @@
+.programs {
+  width: 100%;
+  height: auto;
+  background-color: #f4f3ee;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__desc {
+    max-width: 752px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    margin-bottom: 56px;
+    span {
+      color: $colorPrimary;
+    }
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    .cart {
+      width: 219px;
+      height: 447px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-radius: 4px;
+      background-color: #ffffff;
+      border: 2px solid #e0ded2;
+      &__content {
+        width: 100%;
+        height: auto;
+        padding: 24px 14px;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      &__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        color: #171717;
+        margin-bottom: 8px;
+      }
+      &__desc {
+        font-size: 12px;
+        line-height: 20px;
+        color: #171717;
+        margin-bottom: 11px;
+      }
+      &__image {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: auto;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  &__btn {
+    align-self: center;
+    width: 467px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__desc {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+    &__carts {
+      flex-direction: column;
+      .cart {
+        width: 100%;
+        height: auto;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        &:nth-child(4) {
+          .cart__image {
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            img {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}

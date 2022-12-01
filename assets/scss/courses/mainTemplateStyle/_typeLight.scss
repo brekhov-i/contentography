@@ -1,0 +1,124 @@
+//Slider
+.slider {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__head {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    .slider-prev {
+      margin-right: 24px;
+    }
+  }
+  &__container {
+    width: 100%;
+    .slide {
+      width: 300px;
+      min-height: 627px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: $colorWhite;
+      border-radius: 4px;
+      &__content {
+        width: 100%;
+        height: auto;
+        padding: 24px 16px;
+      }
+      &__title {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        color: $colorPrimary;
+        margin-bottom: 24px;
+      }
+      &__list {
+        margin-bottom: 16px;
+        .list__item {
+          font-size: 14px;
+          line-height: 20px;
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+      &__result,
+      &__chips {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 14px;
+        line-height: 20px;
+        span {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: $colorPrimary;
+          margin-bottom: 4px;
+        }
+      }
+      &__result {
+        margin-bottom: 16px;
+      }
+      &__img {
+        width: 100%;
+        height: auto;
+        margin-top: auto;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__slide {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.typeLight {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: $colorBeige;
+  &__title {
+    margin-bottom: 64px;
+  }
+  &__btn {
+    width: 100%;
+    margin-top: 48px;
+  }
+  &__accordion {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  &__slider {
+    display: none;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__accordion {
+      display: none;
+    }
+    &__slider {
+      display: flex;
+    }
+  }
+}

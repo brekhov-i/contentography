@@ -1,0 +1,281 @@
+.heroSection {
+  width: 100%;
+  height: auto;
+  background-color: #171717;
+  padding-top: 40px;
+  padding-bottom: 64px;
+  overflow: hidden;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "content images"
+      "footer images";
+    grid-template-columns: 743px 1fr;
+  }
+  &__header {
+    position: relative;
+    z-index: 2;
+    grid-area: header;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 57px;
+  }
+  &__breadcrumbs {
+    .breadcrumbs {
+      &__thisPage {
+        color: #ffffff;
+        opacity: 0.8;
+        font-size: 13px;
+        line-height: 18px;
+      }
+      &__link,
+      &__seporator,
+      a {
+        color: #6d7078;
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+  }
+  &__navLinks {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &.navLinks--mobile {
+      display: none;
+    }
+    .navLinks__item {
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 8px;
+      background-color: #ffffff;
+      border-radius: 14px;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+      .navLinks__link {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #171717;
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    grid-area: content;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 82px;
+  }
+  &__frame {
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: #ffffff;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    max-width: 467px;
+  }
+  &__image {
+    position: relative;
+    grid-area: images;
+    picture {
+      max-width: none;
+      img {
+        position: absolute;
+        left: -103px;
+        top: 25px;
+        max-width: none;
+        width: 895px;
+        height: auto;
+      }
+    }
+    .images__block {
+      position: absolute;
+      top: 30px;
+      left: 270px;
+      width: 117px;
+      height: 117px;
+      border-radius: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 11px;
+      text-align: center;
+      font-family: "FiveYearsLater", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #171717;
+    }
+  }
+  &__footer {
+    position: relative;
+    z-index: 2;
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+  }
+  &__list {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    .list__item {
+      max-width: 245px;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &:not(:last-child) {
+        padding-right: 16px;
+        margin-right: 16px;
+        border-right: 1px solid #ffffff;
+      }
+      .item__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+      .item__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #ffffff;
+        opacity: 0.75;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    &__wrapper {
+      grid-template-areas:
+        "content"
+        "images"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+    &__header {
+      display: none;
+    }
+    &__navLinks {
+      display: none;
+      margin-bottom: 32px;
+      &.navLinks--mobile {
+        display: flex;
+      }
+      .navLinks__item {
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+        .navLinks__link {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+    &__content {
+      margin-bottom: 32px;
+    }
+    &__frame {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+    &__title {
+      font-size: 50px;
+      line-height: 57px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+    &__btn {
+      max-width: 467px;
+    }
+    &__image {
+      height: vmin(356);
+      margin-bottom: 32px;
+      picture {
+        max-width: none;
+        img {
+          position: absolute;
+          left: 47%;
+          transform: translateX(-50%);
+          width: vmin(754);
+          height: auto;
+          top: vmin(-145);
+        }
+      }
+      .images__block {
+        top: vmin(80);
+        left: 46%;
+        transform: translateX(-50%);
+        background-color: #171717;
+        color: #ffffff;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      .list__item {
+        max-width: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        &:not(:last-child) {
+          padding: 0;
+          margin: 0;
+          border: none;
+          padding-bottom: 16px;
+          margin-bottom: 16px;
+          border-bottom: 2px solid #ffffff;
+        }
+      }
+    }
+  }
+}

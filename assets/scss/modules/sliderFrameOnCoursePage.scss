@@ -1,0 +1,62 @@
+//Стили для фрейма "Черная пятница" на страницах курсов
+section {
+  position: relative;
+  .slider__frameBlackFriday {
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    background-color: #171717;
+    padding: 16px 0;
+    left: 0;
+    right: 0;
+    &.slider--top {
+      top: 0;
+    }
+    &.slider--bottom {
+      bottom: 0;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    .slide {
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: #ffffff;
+      span {
+        font-family: "FiveYearsLater", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #bc9c5e;
+        margin-left: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .slider__frameBlackFriday {
+      height: 52px;
+      padding: 8px 0;
+      .slide {
+        .text1 {
+          font-size: 14px;
+          line-height: 20px;
+          margin-right: 16px;
+        }
+        .text2 {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

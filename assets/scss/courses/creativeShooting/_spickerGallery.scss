@@ -1,0 +1,95 @@
+.spickerGallery {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding-top: 144px;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+  }
+  &__text {
+    max-width: 794px;
+    font-family: "Five Years Later";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    color: #171717;
+    margin-left: max(15px, calc((100% - 1160px) / 2));
+    margin-bottom: 40px;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, vw(387));
+    grid-gap: 6px;
+    overflow: hidden;
+    picture {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &:nth-child(4) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row: span 2;
+      }
+      &:nth-child(5) {
+        grid-column: span 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    &__wrapper {
+      padding: 0 10px;
+    }
+    &__text {
+      font-size: 22px;
+      line-height: 26px;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+    &__content {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 16px;
+      picture {
+        width: 100%;
+        height: auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        &:nth-child(n + 7) {
+          display: none;
+        }
+      }
+    }
+  }
+}

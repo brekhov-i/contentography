@@ -1,0 +1,55 @@
+.likesStudents {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: $colorWhite;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 510px;
+    margin-bottom: 40px;
+  }
+  &__list {
+    margin-bottom: 0 !important;
+    .list-col {
+      &:not(:last-child) {
+        margin-right: 110px;
+      }
+      .list__item {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+        .item__text {
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 72px 0;
+    &__list {
+      flex-direction: column !important;
+      .list-col {
+        width: 100% !important;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 40px;
+        }
+        .list__item {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

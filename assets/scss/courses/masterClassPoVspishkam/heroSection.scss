@@ -1,0 +1,206 @@
+.heroSection {
+  width: 100%;
+  height: auto;
+  background-color: #171717;
+  padding-top: 45px;
+  padding-bottom: 86px;
+  overflow: hidden;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: calc((100% - 1160px) / 2);
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "content image";
+    grid-template-columns: 608px 1fr;
+    grid-gap: 0 40px;
+  }
+  &__header {
+    width: 100%;
+    height: auto;
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__breadcrumbs {
+    width: auto;
+    height: auto;
+    .breadcrumbs {
+      .breadcrumbs__link {
+        color: #babac3;
+      }
+      .separator {
+        color: #babac3;
+      }
+      .breadcrumbs__thisPage {
+        color: #ffffff;
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    grid-area: content;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__frame {
+    width: auto;
+    height: auto;
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+  &__title {
+    font-size: 65px;
+    line-height: 64px;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+  &__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    .list__item {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .item__dot {
+        min-width: 11px;
+        width: 11px;
+        height: 11px;
+        background-color: #a4c6f1;
+        border-radius: 100%;
+        margin-top: 8px;
+        margin-right: 12px;
+      }
+      .item__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    max-width: 467px;
+  }
+  &__image {
+    grid-area: image;
+    position: absolute;
+    left: -124px;
+    top: -21%;
+    width: 780px;
+    height: auto;
+    .image__block {
+      max-width: 285px;
+      position: absolute;
+      top: 13%;
+      left: 41%;
+      background-color: #ffffff;
+      box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 14px 30px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      color: #171717;
+      span {
+        color: #f57b51;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 32px;
+    padding-bottom: 0;
+    max-height: 1350px;
+    &__wrapper {
+      padding-left: 10px;
+      padding-right: 10px;
+      display: grid;
+      grid-template-areas:
+        "header"
+        "content"
+        "image";
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+    &__header {
+      margin-bottom: 32px;
+    }
+    &__content {
+      margin-bottom: 110px;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 42px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+    }
+    &__list {
+      .list__item {
+        .item__dot {
+          margin-top: 4px;
+        }
+      }
+    }
+    &__btn {
+      width: 100%;
+      max-width: 467px;
+      padding: 18px 50px;
+    }
+    &__image {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -15%;
+      width: 220%;
+      .image__block {
+        max-width: 237px;
+        position: absolute;
+        top: 8%;
+        left: 52%;
+        transform: translateX(-50%);
+        padding: 12px 20px;
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+  }
+}

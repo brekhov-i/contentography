@@ -1,0 +1,48 @@
+.workWithStudent {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+    max-width: 703px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px 16px;
+    flex-wrap: wrap;
+    .cart {
+      width: 219px;
+      height: 105px;
+      background-color: #F5F5F7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__carts {
+      gap: 8px;
+      .cart {
+        width: 145px;
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}

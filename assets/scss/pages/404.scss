@@ -1,0 +1,128 @@
+@import "../function.scss";
+
+.main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #e0ded2;
+  padding: 144px 0;
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    img {
+      height: 100%;
+    }
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-size: 197px;
+    line-height: 100%;
+    margin-bottom: 16px;
+  }
+  &__text {
+    max-width: 370px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__nav {
+    width: auto;
+    height: auto;
+    .nav__list {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 0;
+      .list__item {
+        width: auto;
+        height: auto;
+        padding: 4px 16px;
+        border: 1px solid #171717;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+        .item__link {
+          font-family: "FiveYearsLater", sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 26px;
+          color: #171717;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 64px;
+    padding-bottom: vmin(342);
+    &__bg {
+      height: auto;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      display: flex;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+    &__content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__title {
+      font-size: 140px;
+    }
+    &__text {
+      max-width: none;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+    &__nav {
+      width: 100%;
+      .nav__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .list__item {
+          .item__link {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.callbackHelp {
+  &__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}

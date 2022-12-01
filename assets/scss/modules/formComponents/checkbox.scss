@@ -1,0 +1,44 @@
+.checkboxBlock {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+  input:checked ~ .checkbox {
+    background-color: #f57b51;
+    transition: 0.5s background-color ease-in-out;
+    svg {
+      opacity: 1;
+      transition: 0.5s opacity ease-in-out;
+    }
+  }
+  .checkbox {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 1px solid #f57b51;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 3px;
+    transition: 0.5s background-color ease-in-out;
+    margin-right: 8px;
+    svg {
+      opacity: 0;
+      width: 100px;
+      height: 100%;
+      transition: 0.5s opacity ease-in-out;
+    }
+  }
+  .text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #171717;
+  }
+}

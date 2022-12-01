@@ -1,0 +1,20 @@
+@import "./vars";
+
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("assets/fonts/#{$url}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin container {
+  width: max(10px, calc(100% - (100% - 1160px)));
+  margin: 0 auto;
+  @media screen and (max-width: 576px) {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+}

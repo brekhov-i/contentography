@@ -1,0 +1,21 @@
+//Для составления блоков для gutenberga стили в основном брать тут
+
+@import '../function';
+@import '../mixins';
+@import '../vars';
+
+html, body {
+  overflow-x: hidden;
+}
+//Templates
+@import './kakKrasivoSnimatNu/heroSection';
+@import './kakKrasivoSnimatNu/sectionWithVideo';
+@import './kakKrasivoSnimatNu/forWhom';
+@import './kakKrasivoSnimatNu/noForWhom';
+@import './kakKrasivoSnimatNu/program';
+@import './kakKrasivoSnimatNu/resultCourse';
+@import './kakKrasivoSnimatNu/tariff';
+@import './kakKrasivoSnimatNu/gift';
+@import './kakKrasivoSnimatNu/speaker';
+@import './kakKrasivoSnimatNu/myth';
+@import './kakKrasivoSnimatNu/faq';

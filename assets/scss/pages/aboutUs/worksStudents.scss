@@ -1,0 +1,43 @@
+.worksStudents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 144px;
+  &__title {
+    max-width: 780px;
+    margin-left: calc((100% - 1160px) / 2);
+    margin-bottom: 40px;
+    span {
+      font-weight: 500;
+      font-family: "ObjectSans", sans-serif;
+    }
+  }
+  &__gallery {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding-top: 72px;
+    &__title {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+      margin-bottom: 24px;
+    }
+    &__gallery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4px;
+    }
+  }
+}

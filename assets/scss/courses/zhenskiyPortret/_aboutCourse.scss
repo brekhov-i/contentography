@@ -1,0 +1,82 @@
+.aboutCourse {
+  position: relative;
+  padding-top: 144px;
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  &__wrapper {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 280px;
+  }
+  &__carts {
+    width: 100%;
+    gap: 0;
+    .aboutCourse-carts__col {
+      gap: 0;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+    .cart {
+      padding: 24px 40px;
+      flex-grow: 0;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      &__icon {
+        margin-right: 24px;
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: #171717;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    display: block;
+    .container {
+      padding: 0;
+    }
+    &__bg {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    &__wrapper {
+      padding-bottom: vmin(587);
+    }
+    &__title {
+      padding: 0 15px;
+    }
+    &__carts {
+      width: 100%;
+      flex-direction: column;
+      gap: 16px 0;
+      margin-bottom: 0;
+      padding: 0 15px;
+      .aboutCourse-carts__col {
+        width: 100%;
+        gap: 0;
+      }
+      .cart {
+        padding: 16px;
+        flex-grow: 0;
+        &__icon {
+          margin-right: 16px;
+        }
+        &__text {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

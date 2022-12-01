@@ -1,0 +1,27 @@
+.myth {
+  width: 100%;
+  height: auto;
+  background-color: #f4f3ee;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+  }
+  &__slider {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: flex-start;
+    }
+    .slider-slide {
+      width: 260px;
+      .cart {
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+  }
+}

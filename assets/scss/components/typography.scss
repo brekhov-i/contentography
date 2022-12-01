@@ -1,0 +1,34 @@
+/**
+* Главный заголовок страницы.
+* Используется один раз на странице.
+*/
+.main-title {
+  font-family: $titleFont;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 74px;
+  color: $colorBlack;
+  span {
+    color: $colorPrimary;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.section-title {
+  font-family: $titleFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 63px;
+  color: $colorBlack;
+  span {
+    color: $colorPrimary;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}

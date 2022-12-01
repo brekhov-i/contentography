@@ -1,0 +1,115 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: $colorPrimary;
+  z-index: 2;
+
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 660px 1fr;
+    padding: 88px 0;
+    overflow: hidden;
+    padding-left: max(10px, calc((100% - 1160px) / 2));
+  }
+  &__textBlock {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 500px;
+    margin-bottom: 24px;
+    color: #ffffff;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+  &__image {
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: none;
+      width: 600px;
+    }
+  }
+  &__btnScroll {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(0, -50%);
+    width: 72px;
+    height: 72px;
+    background: #ffffff;
+    border-radius: 100%;
+    &::before {
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      border-radius: 100%;
+      border: 2px dashed #ffffff;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__wrapper {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 64px 10px 0;
+    }
+    &__textBlock {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__title {
+      font-size: 47px;
+      line-height: 50px;
+      margin-bottom: 16px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__image {
+      position: relative;
+      height: vmin(173);
+      img {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        max-width: none;
+        width: 100%;
+      }
+    }
+    &__btnScroll {
+      bottom: -16%;
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      &::before {
+        width: 73px;
+        height: 73px;
+      }
+    }
+  }
+}

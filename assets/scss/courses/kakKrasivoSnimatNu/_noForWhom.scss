@@ -1,0 +1,75 @@
+.noForWhom {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #ffffff;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px 40px;
+    .cart {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &__icon {
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+        margin-right: 16px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: #171717;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+    &__carts {
+      grid-template-columns: 1fr;
+      grid-gap: 24px 0px;
+      .cart {
+        &__icon {
+          min-width: 24px;
+          width: 24px;
+          height: 24px;
+        }
+        &__text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

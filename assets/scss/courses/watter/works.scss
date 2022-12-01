@@ -1,0 +1,29 @@
+.works {
+  background-color: #a4c6f1;
+  &__gallery {
+   
+    picture {
+      &:nth-child(2) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__gallery {
+      grid-auto-rows: 254px;
+      picture {
+        &:nth-child(1) {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+        &:nth-child(3) {
+          grid-column: 1;
+        }
+        &:nth-child(4) {
+          grid-column: 2;
+        }
+      }
+    }
+  }
+}

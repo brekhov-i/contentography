@@ -1,0 +1,95 @@
+.courses {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #171717;
+  padding: 0;
+  &__slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    padding: 16px 0;
+    border-top: 2px solid #b8a97f;
+    border-bottom: 2px solid #b8a97f;
+    &.slider__frameBlackFriday--top {
+      top: 0;
+    }
+    &.slider__frameBlackFriday--bottom {
+      bottom: 0;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    .slide {
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .text1 {
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 24px;
+      }
+      .text2 {
+        font-family: "FiveYearsLater", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #bc9c5e;
+      }
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 144px 0;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 63px;
+    color: #ffffff;
+    margin-bottom: 100px;
+    span {
+      color: #bc9c5e;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 0;
+    &__slider {
+      padding: 8px 0;
+      .slide {
+        .text1 {
+          font-size: 14px;
+          line-height: 20px;
+          margin-right: 16px;
+        }
+        .text2 {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    &__wrapper {
+      padding: 120px 0;
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 50px;
+    }
+  }
+}

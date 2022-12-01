@@ -1,0 +1,21 @@
+.faq {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #E0DED2;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 72px 0;
+  }
+}

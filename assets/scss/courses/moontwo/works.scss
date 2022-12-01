@@ -1,0 +1,52 @@
+.works {
+  width: 100%;
+  height: auto;
+  background-color: #caaaf3;
+  &__title {
+    width: 100%;
+    height: auto;
+    padding-left: calc((100% - 1160px) / 2);
+    margin-bottom: 40px;
+  }
+  &__gallery {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+    picture {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__title {
+      padding: 0 10px;
+      margin-bottom: 24px;
+    }
+    &__gallery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 217px;
+      grid-gap: 4px;
+      picture {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &:last-child {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+      }
+    }
+  }
+}

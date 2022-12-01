@@ -1,0 +1,111 @@
+.youLearn {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 144px;
+  padding-bottom: 460px;
+  background-color: #f4f3ee;
+  overflow: hidden;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 146px;
+    margin-bottom: 40px;
+    .list__col {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .list__item {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+        .item__icon {
+          max-width: 24px;
+          width: 24px;
+          height: 24px;
+          border-radius: 100%;
+          margin-right: 8px;
+        }
+        .item__textBlock {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .item__text {
+          font-size: 18px;
+          line-height: 26px;
+          color: #171717;
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    max-width: 467px;
+    margin: 0 auto;
+  }
+  &__bg {
+    position: absolute;
+    left: 50%;
+    bottom: -148px;
+    transform: translateX(-50%);
+    width: 1475px;
+    max-width: 1570px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 576px) {
+    padding-top: 72px;
+    padding-bottom: vmin(584);
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 24px 0;
+      .list__col {
+        .list__item {
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+          .item__icon {
+            margin-right: 16px;
+          }
+          .item__text {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    &__bg {
+      bottom: vmin(-60);
+      width: vmin(380);
+    }
+  }
+}

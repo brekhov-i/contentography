@@ -1,0 +1,197 @@
+.reviews {
+  width: 100%;
+  height: auto;
+  background-color: #e0ded2;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 764px;
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    .cart {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: 736px 1fr;
+      grid-gap: 0 40px;
+      background-color: #ffffff;
+      padding: 0 24px;
+      padding-top: 40px;
+      border-radius: 4px;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      &.cart--reverse {
+        padding-bottom: 40px;
+        padding-top: 0;
+        .cart__image {
+          align-items: flex-start;
+        }
+        .cart__content {
+          padding-top: 40px;
+          padding-bottom: 0;
+        }
+      }
+      &__content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 40px;
+      }
+      &__text {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #171717;
+        margin-bottom: 32px;
+        padding: 0 40px;
+        span {
+          position: absolute;
+          font-weight: 400;
+          font-size: 55px;
+          line-height: 58px;
+          color: #feefe9;
+          &:first-child {
+            top: -22px;
+            left: 0;
+          }
+          &:last-child {
+            bottom: -12px;
+            right: 0;
+          }
+        }
+        ul {
+          list-style: disc;
+          padding-left: 20px;
+          li {
+            &::marker {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #171717;
+        margin-bottom: 8px;
+        padding-left: 40px;
+      }
+      &__course {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #232323;
+        padding-left: 40px;
+        a {
+          font-weight: 500;
+          color: #f57b51;
+        }
+      }
+      &__image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-end;
+        img {
+          max-width: none;
+          width: 420px;
+        }
+      }
+    }
+    .openAllCarts__btn {
+      background-color: #171717;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__carts {
+      .cart {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 16px 0;
+        background-color: #ffffff;
+        padding: 24px 16px;
+        padding-bottom: 0;
+        border-radius: 4px;
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+        &.cart--reverse {
+          padding-top: 24px;
+          padding-bottom: 0;
+          .cart__image {
+            align-items: flex-end;
+          }
+          .cart__content {
+            padding-top: 0px;
+            padding-bottom: 0;
+          }
+        }
+        &__content {
+          padding-bottom: 0px;
+        }
+        &__text {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 16px;
+          padding: 0;
+          span {
+            position: relative;
+            font-size: 14px;
+            line-height: 20px;
+            color: #f57b51;
+            &:first-child {
+              top: auto;
+              left: auto;
+            }
+            &:last-child {
+              bottom: auto;
+              right: auto;
+            }
+          }
+        }
+        &__name {
+          margin-bottom: 4px;
+          padding-left: 0;
+        }
+        &__course {
+          font-size: 14px;
+          line-height: 20px;
+          padding-left: 0;
+        }
+        &__image {
+          justify-content: center;
+          img {
+            max-width: none;
+            width: 222px;
+          }
+        }
+      }
+      .openAllCarts__btn {
+        background-color: transparent;
+      }
+    }
+  }
+}

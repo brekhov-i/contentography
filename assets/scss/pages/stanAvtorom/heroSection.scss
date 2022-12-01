@@ -1,0 +1,135 @@
+.heroSection {
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  background-color: #bed5ae;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "content image";
+    grid-template-columns: 660px 1fr;
+    grid-gap: 0 40px;
+  }
+  &__header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: header;
+    margin-bottom: 26px;
+    .navLinks {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &__item {
+        width: auto;
+        height: auto;
+        background-color: #171717;
+        border-radius: 14px;
+        padding: 4px 8px;
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+      &__link {
+        font-family: "FiveYearsLater", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: content;
+    align-self: flex-start;
+    padding-top: 30px;
+  }
+  &__title {
+    font-size: 56px;
+    line-height: 63px;
+    margin-bottom: 24px;
+    span {
+      font-weight: 500;
+      font-family: "ObjectSans", sans-serif;
+      color: #171717;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    max-width: 467px;
+  }
+  &__image {
+    height: 511px;
+    grid-area: image;
+    img {
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 32px;
+    &__wrapper {
+      grid-template-areas:
+        "header"
+        "content"
+        "image";
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+    &__header {
+      margin-bottom: 24px;
+      justify-content: flex-start;
+      .navLinks {
+        flex-direction: column;
+        &__item {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    &__content {
+      margin-bottom: 44px;
+      padding-top: 0;
+    }
+    &__title {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 16px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

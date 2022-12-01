@@ -1,0 +1,59 @@
+.aboutCourse {
+  &-carts {
+    &__col {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      .cart {
+        flex-grow: 0;
+        border: 1px solid #caaaf3;
+        padding: 24px 40px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        &__text {
+          font-size: 18px;
+          line-height: 26px;
+          color: #171717;
+          strong {
+            font-weight: 500;
+          }
+          a {
+            position: relative;
+            color: $colorPrimary;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    display: block;
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    &-carts {
+      flex-direction: column;
+      margin-bottom: 0;
+      &__col {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 40px;
+          margin-right: 0;
+        }
+        .cart {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          &:not(:last-child) {
+            margin-bottom: 40px;
+          }
+          &__text {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

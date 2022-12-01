@@ -1,0 +1,119 @@
+.aboutTraining {
+  width: 100%;
+  height: auto;
+  background-color: #f4f3ee;
+  padding: 144px 0;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0 16px;
+    .cart {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: #ffffff;
+      padding-top: 24px;
+      border: 2px solid #caaaf3;
+      border-radius: 4px;
+      &__title {
+        padding: 0 14px;
+        font-family: "FiveYearsLater", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: #171717;
+        margin-bottom: 8px;
+      }
+      &__text {
+        padding: 0 14px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #171717;
+        margin-bottom: 33px;
+        strong {
+          font-weight: 500;
+        }
+      }
+      &__image {
+        width: 100%;
+        height: auto;
+        margin-top: auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(5) {
+        .cart__image {
+          padding: 0 14px;
+          padding-bottom: 14px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__carts {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px 0;
+      .cart {
+        &__text {
+          padding: 0 14px;
+          padding-top: 24px;
+          font-size: 16px;
+          line-height: 24px;
+          color: #171717;
+          margin-bottom: 33px;
+          span {
+            font-weight: bold;
+            color: #f57b51;
+          }
+          strong {
+            font-weight: 500;
+          }
+        }
+        &__image {
+          width: 100%;
+          height: auto;
+          margin-top: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        &:first-child,
+        &:nth-child(2) {
+          .cart__image {
+            max-width: 210px;
+            margin: 0 auto;
+          }
+        }
+        &:nth-child(2) {
+          .cart__image {
+            margin-bottom: 18px;
+          }
+        }
+      }
+    }
+  }
+}

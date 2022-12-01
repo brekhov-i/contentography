@@ -1,0 +1,90 @@
+.startLearning {
+  width: 100%;
+  height: auto;
+  background: $colorGreen;
+  padding: 144px 0;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 536px 1fr;
+    grid-gap: 0 76px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding-top: 154px;
+    padding-bottom: 170px;
+    padding-left: 64px;
+    overflow: hidden;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    max-width: 467px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    position: absolute;
+    bottom: -263px;
+    right: -300px;
+    height: 140%;
+    width: auto;
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      padding-top: 40px;
+      padding-bottom: vmin(360);
+      padding-left: 0;
+    }
+    &__content {
+      padding: 0 16px;
+    }
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 130%;
+      margin-bottom: 40px;
+    }
+    &__image {
+      position: absolute;
+      bottom: vmin(-159);
+      right: vmin(-180);
+      height: auto;
+      width: 180%;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

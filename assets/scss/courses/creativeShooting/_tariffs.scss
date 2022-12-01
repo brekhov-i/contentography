@@ -1,0 +1,36 @@
+.tariffs {
+  &__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .title-frame {
+      width: auto;
+      height: auto;
+      padding: 8px;
+      background: rgba(202, 170, 243, 0.1);
+      border: 1px solid #caaaf3;
+      border-radius: 14px;
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #171717;
+      margin-left: 40px;
+      span {
+        color: #f57b51;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    &__title {
+      flex-direction: column;
+      align-items: flex-start;
+      .title-frame {
+        margin-left: 0;
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

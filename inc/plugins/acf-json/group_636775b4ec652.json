@@ -1,0 +1,114 @@
+{
+    "key": "group_636775b4ec652",
+    "title": "Страница настроек",
+    "fields": [
+        {
+            "key": "field_636775e3c5bb5",
+            "label": "Даты продаж",
+            "name": "date_sale",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 1,
+            "rows_per_page": 10,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Добавить",
+            "sub_fields": [
+                {
+                    "key": "field_63677615c5bb6",
+                    "label": "Курс",
+                    "name": "course",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "p"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "parent_repeater": "field_636775e3c5bb5"
+                },
+                {
+                    "key": "field_63677631c5bb7",
+                    "label": "Начальная дата",
+                    "name": "start_sale",
+                    "type": "date_time_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "Y-m-d H:i:s",
+                    "return_format": "Y-m-d H:i:s",
+                    "first_day": 1,
+                    "parent_repeater": "field_636775e3c5bb5"
+                },
+                {
+                    "key": "field_6367767cc5bb8",
+                    "label": "Конечная дата",
+                    "name": "end_sale",
+                    "type": "date_time_picker",
+                    "instructions": "Укажите дату окончания продаж",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63677631c5bb7",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "Y-m-d H:i:s",
+                    "return_format": "Y-m-d H:i:s",
+                    "first_day": 1,
+                    "parent_repeater": "field_636775e3c5bb5"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-nastrojki-kursov"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1669112912
+}
