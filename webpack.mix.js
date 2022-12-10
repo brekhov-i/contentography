@@ -109,6 +109,7 @@ mix
   .sass("./assets/scss/courses/perfomans.scss", "./css/courses/perfomans.css")
   //================= retush =====================
   .sass("./assets/scss/courses/retush.scss", "./css/courses/retush.css")
+  .js("./assets/js/courses/retush.js", "./js/courses/retush.js")
   //============ spetsusloviyaBaev ===============
   .sass(
     "./assets/scss/courses/spetsusloviyaBaev.scss",
@@ -127,6 +128,12 @@ mix
     "./css/courses/zhenskiyPortret.css"
   )
 
+  //=========== MINICOURSES ================
+  .sass(
+    "./assets/scss/minicourse/cvetretush.scss",
+    "/css/minicourse/cvetretush.css"
+  )
+
   .setPublicPath("./public")
   .sourceMaps(productionSourceMaps, "source-map")
   .disableSuccessNotifications()
@@ -143,8 +150,7 @@ mix
         dry: false,
         cleanOnceBeforeBuildPatterns: [
           "../editor-style.css.map",
-          "../style.css.map",
-          "**/*",
+          "../style.css.map"
         ],
         dangerouslyAllowCleanPatternsOutsideProject: true,
       }),
@@ -163,27 +169,12 @@ mix
             noErrorOnMissing: true,
           },
           {
-            from: "./public/css/style.css.map",
-            to: "../",
-            toType: "dir",
-            noErrorOnMissing: true,
-            filter: async (resourcePath) => {
-              return productionSourceMaps;
-            },
-          },
-          {
-            from: "./public/css/editor-style.css.map",
-            to: "../",
-            toType: "dir",
-            noErrorOnMissing: true,
-            filter: async (resourcePath) => {
-              return productionSourceMaps;
-            },
-          },
-          {
             from: "./assets/img",
             to: "./img",
             noErrorOnMissing: true,
+            globOptions: {
+              ignore: ["**/**.webp"],
+            },
           },
           {
             from: "./assets/fonts",

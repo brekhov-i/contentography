@@ -22,6 +22,7 @@ $courses = get_field('kursy');
                             $courseCartImg = get_field('cartBgImg', $course->ID);
                             $courseCountPeople = get_field('chelovek_na_kurse', $course->ID);
                             $courseDesc = get_field('opisanie_kursa', $course->ID);
+                            $category = get_the_category($course->ID);
                             ?>
                             <div class="courseCart courses__cart">
                                 <div class="author courseCart__author">
@@ -47,7 +48,7 @@ $courses = get_field('kursy');
                                     <div class="courseCart__title"><?php echo get_the_title($course->ID) ?></div>
                                     <div class="courseCart__desc"><?php echo $courseDesc ?></div>
                                     <a href="<?php echo get_the_permalink($course->ID) ?>" class="courseCart__link">
-                                        Посмотреть курс
+                                        Посмотреть <?php echo $category['name'] ?>
                                         <svg width="33" height="16" viewBox="0 0 33 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M32.7071 8.70711C33.0976 8.31658 33.0976 7.68342 32.7071 7.29289L26.3431 0.928932C25.9526 0.538408 25.3195 0.538408 24.9289 0.928932C24.5384 1.31946 24.5384 1.95262 24.9289 2.34315L30.5858 8L24.9289 13.6569C24.5384 14.0474 24.5384 14.6805 24.9289 15.0711C25.3195 15.4616 25.9526 15.4616 26.3431 15.0711L32.7071 8.70711ZM0 9H32V7H0V9Z" fill="#F57B51" />
                                         </svg>
@@ -56,6 +57,7 @@ $courses = get_field('kursy');
                             </div>
                         <?php endforeach; ?>
                     </div>
+
                     <a href="<?php echo get_post_type_archive_link("p"); ?>" class="btn courses__btn">
                         Смотреть все курсы
                         <svg width="34" height="15" viewBox="0 0 34 15" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -61,6 +61,35 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        ul {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          list-style: disc;
+          padding-left: 20px;
+          li {
+            width: 100%;
+            height: auto;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #171717;
+            strong {
+              font-weight: 500;
+            }
+            &:not(:last-child) {
+              margin-bottom: 16px;
+            }
+            &::marker {
+              color: #f57b51;
+              margin-right: 16px;
+              margin-top: 9px;
+            }
+          }
+        }
       }
       &__title {
         font-family: "FiveYearsLater", sans-serif;
@@ -69,42 +98,6 @@
         line-height: 42px;
         color: #171717;
         margin-bottom: 24px;
-      }
-      &__list {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        .list__item {
-          width: 100%;
-          height: auto;
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
-          &:not(:last-child) {
-            margin-bottom: 16px;
-          }
-          .item__dot {
-            min-width: 8px;
-            width: 8px;
-            height: 8px;
-            border-radius: 100%;
-            background-color: #f57b51;
-            margin-right: 16px;
-            margin-top: 9px;
-          }
-          .item__text {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 26px;
-            color: #171717;
-            strong {
-              font-weight: 500;
-            }
-          }
-        }
       }
     }
   }
@@ -122,14 +115,15 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-auto-rows: vw(485);
+      grid-gap: 8px;
       margin-bottom: 40px;
       overflow: hidden;
       transition: 0.5s max-height ease-in-out;
-      picture {
+      .cart {
         width: 100%;
         height: 100%;
-        grid-column: span 1;
-        grid-row: span 1;
+        overflow: hidden;
+        picture,
         img {
           width: 100%;
           height: 100%;
@@ -151,6 +145,7 @@
       font-size: 18px;
       line-height: 26px;
       color: #ffffff;
+      margin-top: 0;
       svg {
         margin-left: 12px;
         fill: #ffffff;
@@ -194,14 +189,8 @@
         }
         &__textBlock {
           padding: 0 16px;
-        }
-        &__list {
-          .list__item {
-            .item__dot {
-              margin-right: 12px;
-              margin-top: 8.5px;
-            }
-            .item__text {
+          ul {
+            li {
               font-size: 16px;
               line-height: 24px;
             }
@@ -214,7 +203,9 @@
       .gallery__carts {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: vmin(217);
-        picture {
+        grid-gap: 4px;
+        .cart {
+          border-radius: 0;
           &:nth-child(7) {
             grid-row-start: 3 !important;
             grid-row-end: 5 !important;
@@ -236,6 +227,8 @@
         line-height: 24px;
         color: #171717;
         margin-left: 10px;
+        margin-top: 0;
+        align-self: flex-start;
         svg {
           margin-left: 16px;
           fill: #f57b51;

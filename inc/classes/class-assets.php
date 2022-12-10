@@ -11,6 +11,7 @@
 namespace contentography\Inc;
 
 use contentography\Inc\Traits\Singleton;
+use MyThemeShop\Helpers\Arr;
 
 class Assets
 {
@@ -96,6 +97,18 @@ class Assets
         }
         if (is_page_template('courses/stan-feshn-fotografom.php')) {
             wp_enqueue_style('stanFeshnFotografom-css', BUILD_CSS_URI . '/courses/stanFeshnFotografom.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/stanFeshnFotografom.css'), 'all');
+        }
+        if (is_page_template('courses/single-course-name.php')) {
+            wp_enqueue_style('nameInPhoto-css', BUILD_CSS_URI . '/courses/nameInPhoto.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/nameInPhoto.css'), 'all');
+        }
+        if (is_page_template('courses/retush.php')) {
+            wp_enqueue_style('retush-css', BUILD_CSS_URI . '/courses/retush.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/retush.css'), 'all');
+            wp_enqueue_script('retush-js', BUILD_JS_URI . '/courses/retush.js', array(), filemtime(BUILD_JS_PATH . '/courses/retush.js'), true);
+        }
+
+        //============ MiniCourse =========
+        if(is_page_template('miniCourses/marafonCRD.php')) {
+            wp_enqueue_style('cvetretush-css', BUILD_CSS_URI . '/minicourse/cvetretush.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/minicourse/cvetretush.css'), 'all');
         }
     }
 

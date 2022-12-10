@@ -37,6 +37,7 @@ function modalWindow() {
 
       if (!window.classList.contains("open")) {
         window.classList.add("open");
+        
       }
 
       if (!closeBtn) return;

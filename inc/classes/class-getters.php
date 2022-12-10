@@ -228,6 +228,11 @@ class Getters
 
     public function getPathPrice($price)
     {
-        return round($price / 4, 0, PHP_ROUND_HALF_EVEN);
+        return number_format(round($price / 4, 0, PHP_ROUND_HALF_EVEN), 0, " ", ' ');
+    }
+
+    public function getInstallmentPrice($price, $term = 12)
+    {
+        return number_format(round($price / $term, 0, PHP_ROUND_HALF_EVEN), 0, " ", ' ');
     }
 }

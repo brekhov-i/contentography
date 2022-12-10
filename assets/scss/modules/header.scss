@@ -9,6 +9,18 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px 32px;
+  position: relative;
+  &__snowflake {
+    position: absolute;
+    &.snowflake1 {
+      left: 208px;
+      top: -35px;
+    }
+    &.snowflake2 {
+      left: 870px;
+      top: -20px;
+    }
+  }
   &__mobileBlock {
     width: auto;
     height: 100%;
@@ -42,6 +54,10 @@
     height: vmin(56);
     justify-content: space-between;
     padding: 0;
+    &__snowflake {
+      position: absolute;
+      display: none;
+    }
     &__mobileBlock {
       width: 100%;
       height: auto;
