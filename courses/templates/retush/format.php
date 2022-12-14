@@ -7,8 +7,8 @@
       </div>
       <div class="format__image">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/formatImg.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/formatImg.png" alt="">
+          <source data-srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/formatImg.webp" type="image/webp">
+          <img class="lazy" data-src="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/formatImg.png" alt="">
         </picture>
       </div>
     </div>

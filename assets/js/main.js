@@ -6,3 +6,6 @@ import "./modules/filtersBlocks.js";
 import "./modules/openAllCarts.js";
 import "./modules/accordion.js";
 import "./modules/scrollBtns.js";
+import LazyLoad from "vanilla-lazyload";
+
+var lazyLoadInstance = new LazyLoad();

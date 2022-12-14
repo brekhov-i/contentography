@@ -22,10 +22,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img1--mobile.webp" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img1--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img1.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img1.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img1--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img1--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img1.webp" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img1.png" alt="">
               </picture>
             </div>
           </div>
@@ -95,10 +95,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img2--mobile.webp" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img2--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img2.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img2.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img2--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img2--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img2.webp" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img2.png" alt="">
               </picture>
             </div>
           </div>
@@ -147,10 +147,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img3--mobile.webp" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img3--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img3.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img3.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img3--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img3--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img3.webp" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img3.png" alt="">
               </picture>
             </div>
           </div>
@@ -184,10 +184,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img4--mobile.webp" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img4--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img4.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img4.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img4--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img4--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img4.webp" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img4.png" alt="">
               </picture>
             </div>
           </div>
@@ -249,10 +249,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img5--mobile.png" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img5--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img5.png" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img5.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img5--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img5--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img5.png" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img5.png" alt="">
               </picture>
             </div>
           </div>
@@ -298,10 +298,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img6--mobile.webp" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img6--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img6.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img6.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img6--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img6--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img6.webp" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img6.png" alt="">
               </picture>
             </div>
           </div>
@@ -360,10 +360,10 @@
             </div>
             <div class="cart__image">
               <picture>
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img7--mobile.webp" type="image/webp">
-                <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img7--mobile.png">
-                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img7.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/courses/retush/program/img7.png" alt="">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img7--mobile.webp" type="image/webp">
+                <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img7--mobile.png">
+                <source data-srcset="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img7.webp" type="image/webp">
+                <img class="lazy" data-src="<?php echo get_template_directory_uri() ?>/public/img/courses/retush/program/img7.png" alt="">
               </picture>
             </div>
           </div>

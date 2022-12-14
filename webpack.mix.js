@@ -48,7 +48,14 @@ mix
   //================= thanksEmail ===============
   .sass("./assets/scss/pages/thanksEmail.scss", "./css/pages/thanksEmail.css")
 
+  //=============== Single Post =================
+  .sass("./assets/scss/pages/single.scss", "./css/pages/page-post.css")
+  .sass("./assets/scss/pages/singular.scss", "./css/pages/page-post.css")
+
   //==================== Courses ================
+  //================== NewYear ==================
+  .sass("./assets/scss/courses/newYear.scss", "./css/courses/newYear.css")
+  .js("./assets/js/pages/newYear.js", "./js/courses/newYear.js").vue({version: 3})
   //============== 3-light-schemes ==============
   .sass(
     "./assets/scss/courses/3-light-schemes.scss",
@@ -148,10 +155,11 @@ mix
     plugins: [
       new CleanWebpackPlugin({
         dry: false,
-        cleanOnceBeforeBuildPatterns: [
-          "../editor-style.css.map",
-          "../style.css.map"
+        cleanAfterEveryBuildPatterns: [
+          "./editor-style.css.map",
+          "./style.css.map",
         ],
+        cleanOnceBeforeBuildPatterns: [],
         dangerouslyAllowCleanPatternsOutsideProject: true,
       }),
       new CopyWebpackPlugin({

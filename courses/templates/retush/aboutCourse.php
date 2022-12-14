@@ -46,10 +46,10 @@
       </div>
       <div class="aboutCourse__image">
         <picture>
-          <source media="(max-wifht: 576px)" srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg--mobile.webp" type="image/webp">
-          <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg--mobile.png">
-          <source srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg.png" alt="">
+          <source media="(max-wifht: 576px)" data-srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg--mobile.webp" type="image/webp">
+          <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg--mobile.png">
+          <source data-srcset="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg.webp" type="image/webp">
+          <img class="lazy" data-src="<?php echo get_template_directory_uri(); ?>/public/img/courses/retush/aboutCourseImg.png" alt="">
         </picture>
       </div>
     </div>

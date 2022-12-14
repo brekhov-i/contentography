@@ -1,0 +1,157 @@
+.article {
+  width: 100%;
+  height: auto;
+  line-height: 1.5rem;
+  padding-bottom: 144px;
+  .container {
+    width: 100vw;
+  }
+  .has-gray-color {
+    color: #6d7078;
+  }
+  .has-orange-color {
+    color: #f57b51;
+  }
+  .has-orange-background-color {
+    background-color: #f57b51;
+  }
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__content {
+    max-width: 860px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+    font-family: "FiveYearsLater", sans-serif;
+    line-height: 1.3em;
+    a {
+      color: #f57b51;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 24px;
+    @media screen and (max-width: 576px) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 16px;
+    }
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 16px;
+    @media screen and (max-width: 576px) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 16px;
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  h6 {
+    font-family: "ObjectSans", sans-serif;
+  }
+  p {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    a {
+      font-weight: 500;
+      color: #f57b51;
+    }
+  }
+  ul {
+    list-style: disc inside;
+    li {
+      &::marker {
+        font-size: 14px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      li {
+        &::marker {
+          font-size: 14px;
+        }
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  .wp-block-group {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+    .wp-block-group {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .wp-block-image,
+  .wp-block-columns {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-bottom: 72px;
+    .wptb-table-container[data-wptb-horizontal-scroll-status="true"] {
+      width: 100%;
+      overflow-x: scroll !important;
+    }
+    &__content {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  //Выравнивание
+  .alignfull {
+    width: 100vw;
+    margin-left: calc((860px - 100vw) / 2) !important;
+  }
+  .alignwide {
+    width: 100%;
+  }
+
+  #appComments {
+    width: 100%;
+    max-width: 860px;
+  }
+}

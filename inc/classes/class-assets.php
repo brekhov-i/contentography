@@ -88,6 +88,7 @@ class Assets
             wp_enqueue_style('thanksEmail-css', BUILD_CSS_URI . '/pages/thanksEmail.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/pages/thanksEmail.css'), 'all');
         }
 
+
         //============ Courses ============
         if (is_page_template('courses/3-light-schemes.php')) {
             wp_enqueue_style('3-light-schemes-css', BUILD_CSS_URI . '/courses/3-light-schemes.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/3-light-schemes.css'), 'all');
@@ -105,9 +106,12 @@ class Assets
             wp_enqueue_style('retush-css', BUILD_CSS_URI . '/courses/retush.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/retush.css'), 'all');
             wp_enqueue_script('retush-js', BUILD_JS_URI . '/courses/retush.js', array(), filemtime(BUILD_JS_PATH . '/courses/retush.js'), true);
         }
-
+        if (is_page_template('courses/page-newYear.php')) {
+            wp_enqueue_style('newYear-css', BUILD_CSS_URI . '/courses/newYear.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/courses/newYear.css'), 'all');
+            wp_enqueue_script('newYear-js', BUILD_JS_URI . '/courses/newYear.js', array(), filemtime(BUILD_JS_PATH . '/courses/newYear.js'), true);
+        }
         //============ MiniCourse =========
-        if(is_page_template('miniCourses/marafonCRD.php')) {
+        if (is_page_template('miniCourses/marafonCRD.php')) {
             wp_enqueue_style('cvetretush-css', BUILD_CSS_URI . '/minicourse/cvetretush.css', array('theme-style', 'main-css'), filemtime(BUILD_CSS_PATH . '/minicourse/cvetretush.css'), 'all');
         }
     }

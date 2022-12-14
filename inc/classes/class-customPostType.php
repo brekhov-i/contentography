@@ -140,6 +140,81 @@ class CustomPostType
             'show_in_rest'          => true,
             "show_admin_column"     => true
         ]);
+        register_taxonomy('price', ['p'], [
+            'label'                 => '', // определяется параметром $labels->name
+            'labels'                => [
+                'name'              => __('Категории стоимости', "sensei-school"),
+                'singular_name'     => __('Категория стоимости', "sensei-school"),
+                'search_items'      => __('Поиск категории', "sensei-school"),
+                'all_items'         => __('Все категории', "sensei-school"),
+                'view_item '        => __('Посмотреть категорию', "sensei-school"),
+                'parent_item'       => '',
+                'parent_item_colon' => '',
+                'edit_item'         => __('Редактировать категорию', "sensei-school"),
+                'update_item'       => __('Обновить', "sensei-school"),
+                'add_new_item'      => __('Добавить новую категорию', "sensei-school"),
+                'new_item_name'     => __('Новое название категории', "sensei-school"),
+                'menu_name'         => __('Категории стоимости', "sensei-school"),
+                'back_to_items'     => __('← Вернуться обратно', "sensei-school"),
+            ],
+            'description'           => '', // описание таксономии
+            'public'                => true,
+            'rewrite'               => true,
+            "hierarchical"          => true,
+            'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
+            'show_in_rest'          => true,
+            "show_admin_column"     => true
+        ]);
+        register_taxonomy('complexity', ['p'], [
+            'label'                 => '', // определяется параметром $labels->name
+            'labels'                => [
+                'name'              => __('Уровни сложности', "sensei-school"),
+                'singular_name'     => __('Уровень сложности', "sensei-school"),
+                'search_items'      => __('Поиск уровня', "sensei-school"),
+                'all_items'         => __('Все уровни', "sensei-school"),
+                'view_item '        => __('Посмотреть уровень', "sensei-school"),
+                'parent_item'       => '',
+                'parent_item_colon' => '',
+                'edit_item'         => __('Редактировать уровень', "sensei-school"),
+                'update_item'       => __('Обновить', "sensei-school"),
+                'add_new_item'      => __('Добавить новый уровень', "sensei-school"),
+                'new_item_name'     => __('Новое название уровня', "sensei-school"),
+                'menu_name'         => __('Уровни сложности', "sensei-school"),
+                'back_to_items'     => __('← Вернуться обратно', "sensei-school"),
+            ],
+            'description'           => '', // описание таксономии
+            'public'                => true,
+            'rewrite'               => true,
+            "hierarchical"          => true,
+            'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
+            'show_in_rest'          => true,
+            "show_admin_column"     => true
+        ]);
+        register_taxonomy('thematics', ['p'], [
+            'label'                 => '', // определяется параметром $labels->name
+            'labels'                => [
+                'name'              => __('Тематики', "sensei-school"),
+                'singular_name'     => __('Тематика', "sensei-school"),
+                'search_items'      => __('Поиск тематики', "sensei-school"),
+                'all_items'         => __('Все тематики', "sensei-school"),
+                'view_item '        => __('Посмотреть тематику', "sensei-school"),
+                'parent_item'       => '',
+                'parent_item_colon' => '',
+                'edit_item'         => __('Редактировать тематику', "sensei-school"),
+                'update_item'       => __('Обновить тематику', "sensei-school"),
+                'add_new_item'      => __('Добавить новую тематику', "sensei-school"),
+                'new_item_name'     => __('Новое название тематики', "sensei-school"),
+                'menu_name'         => __('Тематики', "sensei-school"),
+                'back_to_items'     => __('← Вернуться обратно', "sensei-school"),
+            ],
+            'description'           => '', // описание таксономии
+            'public'                => true,
+            'rewrite'               => true,
+            "hierarchical"          => true,
+            'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
+            'show_in_rest'          => true,
+            "show_admin_column"     => true
+        ]);
         register_taxonomy('country', ['vypuskniky'], [
             'label'                 => '', // определяется параметром $labels->name
             'labels'                => [

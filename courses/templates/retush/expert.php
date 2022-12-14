@@ -25,7 +25,7 @@ if (!is_array($authorWorks) && count($authorWorks) === 0) {
     <div class="openAllCarts expert__gallery">
       <div class="openAllCarts__wrapper gallery__carts" data-colCartView="9" data-colCartViewMobile="10" data-inRowCountMobile="2" data-inRowCount="4" data-cartMarginMobile="4" data-cartMargin="8">
         <?php foreach ($authorWorks as $work) : ?>
-          <div class="cart" style="grid-column: span <?php echo $work['column']; ?>; grid-row: span <?php echo $work['row']; ?>">
+          <div class="cart" style="grid-column: span <?php echo $work['count_col']; ?>; grid-row: span <?php echo $work['count_row']; ?>">
             <img src="<?php echo $work['image']['url'] ?>" alt="<?php echo $work['image']['alt'] ?>">
           </div>
         <?php endforeach; ?>

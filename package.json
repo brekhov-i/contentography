@@ -29,6 +29,7 @@
     "axios": "^1.1.3",
     "lvovich": "^2.0.0",
     "swiper": "^8.4.4",
+    "vanilla-lazyload": "^17.8.3",
     "vue": "^3.2.41",
     "vue3-lazyload": "^0.3.6",
     "vuex": "^4.1.0"

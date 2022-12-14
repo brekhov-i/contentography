@@ -1,0 +1,13 @@
+@import "../function";
+@import "../mixins";
+@import "../vars";
+
+@import './newYear/heroSection.scss';
+
+.coursesStock {
+    background-color: #E8E8EE;
+    padding: 40px 0 144px;
+    @media screen and (max-width: 576px) {
+        padding: 20px 0 90px;
+    }
+}

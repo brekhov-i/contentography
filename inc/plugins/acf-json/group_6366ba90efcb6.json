@@ -5,7 +5,7 @@
         {
             "key": "field_6366ba917f27a",
             "label": "Автор курса",
-            "name": "author_course",
+            "name": "avtor",
             "type": "post_object",
             "instructions": "",
             "required": 1,
@@ -44,6 +44,25 @@
             "ui": 1
         },
         {
+            "key": "field_639978f6380e2",
+            "label": "Остались места?",
+            "name": "stay_places",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 0
+        },
+        {
             "key": "field_6366bbf65c9a7",
             "label": "Карточка",
             "name": "",
@@ -62,7 +81,7 @@
         {
             "key": "field_6366bc325c9a9",
             "label": "Видимость",
-            "name": "view_cart",
+            "name": "viewCart",
             "type": "true_false",
             "instructions": "Переключатель, отвечающий за видимость карточки курса на страницах сайта",
             "required": 0,
@@ -265,7 +284,7 @@
                     "name": "cart__title",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -285,7 +304,7 @@
                     "name": "cart__desc",
                     "type": "wysiwyg",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -327,7 +346,7 @@
                     "name": "full_price",
                     "type": "number",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -389,7 +408,7 @@
                     "name": "installment_period",
                     "type": "number",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": [
                         [
                             {
@@ -436,5 +455,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1669112896
+    "modified": 1671008541
 }

@@ -32,10 +32,10 @@
         </div>
       </div>
       <picture>
-        <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg--mobile.webp" type="image/webp">
-        <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg--mobile.png">
+        <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg--mobile.webp" type="image/webp">
+        <source media="(max-width: 576px)" data-srcset="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg--mobile.png">
         <source srcset="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg.png" alt="">
+        <img class="lazy" data-src="<?php echo get_template_directory_uri()  ?>/public/img/courses/retush/heroSectionImg.png" alt="">
       </picture>
     </div>
     <div class="heroSection__footer">
