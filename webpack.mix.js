@@ -55,7 +55,8 @@ mix
   //==================== Courses ================
   //================== NewYear ==================
   .sass("./assets/scss/courses/newYear.scss", "./css/courses/newYear.css")
-  .js("./assets/js/pages/newYear.js", "./js/courses/newYear.js").vue({version: 3})
+  .js("./assets/js/pages/newYear.js", "./js/courses/newYear.js")
+  .vue({ version: 3 })
   //============== 3-light-schemes ==============
   .sass(
     "./assets/scss/courses/3-light-schemes.scss",
@@ -153,15 +154,6 @@ mix
   })
   .webpackConfig({
     plugins: [
-      new CleanWebpackPlugin({
-        dry: false,
-        cleanAfterEveryBuildPatterns: [
-          "./editor-style.css.map",
-          "./style.css.map",
-        ],
-        cleanOnceBeforeBuildPatterns: [],
-        dangerouslyAllowCleanPatternsOutsideProject: true,
-      }),
       new CopyWebpackPlugin({
         patterns: [
           {

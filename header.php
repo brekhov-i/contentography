@@ -14,7 +14,7 @@
 
 <body>
 
-  <?php get_template_part('templates/modules/baners/intensivCRD'); ?>
+  <?php get_template_part('templates/modules/baners/newYear'); ?>
 
   <header class="header">
     <div class="header__mobileBlock <?php if (is_user_logged_in()) echo 'header__mobileBlock--logged' ?>">

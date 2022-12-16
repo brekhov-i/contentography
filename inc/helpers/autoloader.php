@@ -20,7 +20,6 @@ function autoloader($resource = '')
     $resource_path  = false;
     $namespace_root = 'contentography\\';
     $resource       = trim($resource, '\\');
-
     if (empty($resource) || strpos($resource, '\\') === false || strpos($resource, $namespace_root) !== 0) {
         // Not our namespace, bail out.
         return;
@@ -70,6 +69,15 @@ function autoloader($resource = '')
                 break;
         }
 
+        $resource_path = sprintf('%s/inc/%s/%s.php', untrailingslashit(DIR_PATH), $directory, $file_name);
+    }
+    if ('restapi' === $path[0]) {
+        switch ($path[1]) {
+            default:
+                $directory = 'restApi';
+                $file_name = sprintf('restapi-%s', trim(strtolower($path[1])));
+                break;
+        }
         $resource_path = sprintf('%s/inc/%s/%s.php', untrailingslashit(DIR_PATH), $directory, $file_name);
     }
 
