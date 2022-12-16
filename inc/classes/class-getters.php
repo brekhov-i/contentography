@@ -35,12 +35,9 @@ class Getters
      * @param filter boolean
      */
 
-    public function get_posts_p(
-        int $count = -1,
-        string $field = "",
-        bool $filter = true
-    ) {
-        if ($filter && $field != "") {
+    public function get_posts_p($count, $field, $filter = true)
+    {
+        if ($filter && $field) {
 
             $courses = get_posts(array(
                 'numberposts' => $count,
@@ -175,6 +172,34 @@ class Getters
         return $authors;
     }
 
+    public function get_allVipuskniky()
+    {
+        $vipuskniky = get_posts([
+            'posts_per_page' => -1,
+            'post_type' => 'vypuskniky'
+        ]);
+
+        return $vipuskniky;
+    }
+
+    public function get_users($id)
+    {
+
+        $users = get_posts([
+            'numberposts' => -1,
+            'meta_query' => array(
+                array(
+                    'key' => 'projdennye_kursy', // name of custom field
+                    'value' => '"' . (int) $id . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                    'compare' => 'LIKE'
+                )
+            ),
+            'post_type' => 'vypuskniky'
+        ]);
+
+        return count($users);
+    }
+
     public function get_comments()
     {
         $comments = get_comments();
@@ -205,7 +230,6 @@ class Getters
         $contrast = (round($rgb[0] * 299) + round($rgb[1] * 587) + round($rgb[2] * 114)) / 1000;
         return ($contrast >= 125) ? '#000' : '#fff';
     }
-
     public function compareDate($date)
     {
         date_default_timezone_set('Europe/Moscow');
@@ -228,7 +252,7 @@ class Getters
 
     public function getPathPrice($price)
     {
-        return number_format(round($price / 4, 0, PHP_ROUND_HALF_EVEN), 0, " ", ' ');
+        return round($price / 4, 0, PHP_ROUND_HALF_EVEN);
     }
 
     public function getInstallmentPrice($price, $term = 12)

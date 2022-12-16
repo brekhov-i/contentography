@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 require("laravel-mix-webp");
+require("laravel-mix-clean");
 let productionSourceMaps = process.env.NODE_ENV === "development";
 
 mix
@@ -143,6 +144,11 @@ mix
   )
 
   .setPublicPath("./public")
+  .clean()
+  .copy("./assets/fonts", "public/fonts")
+  .copy("./assets/img", "public/img")
+  .copy("./public/css/style.css", "../")
+  .copy("./public/css/editor-style.css", "../")
   .sourceMaps(productionSourceMaps, "source-map")
   .disableSuccessNotifications()
   .ImageWebp({
@@ -154,40 +160,6 @@ mix
   })
   .webpackConfig({
     plugins: [
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: "./public/css/style.css",
-            to: "../",
-            toType: "dir",
-            noErrorOnMissing: true,
-          },
-          {
-            from: "./public/css/editor-style.css",
-            to: "../",
-            toType: "dir",
-            noErrorOnMissing: true,
-          },
-          {
-            from: "./assets/img",
-            to: "./img",
-            noErrorOnMissing: true,
-            globOptions: {
-              ignore: ["**/**.webp"],
-            },
-          },
-          {
-            from: "./assets/fonts",
-            to: "./fonts",
-            noErrorOnMissing: true,
-          },
-          {
-            from: "./assets/video",
-            to: "./video",
-            noErrorOnMissing: true,
-          },
-        ],
-      }),
       // new ImageminPlugin({
       //   test: /\.(jpe?g|png|gif)$/i,
       //   disable: productionSourceMaps,

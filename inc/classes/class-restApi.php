@@ -11,7 +11,10 @@
 namespace contentography\Inc;
 
 use contentography\Inc\Traits\Singleton;
+use contentography\RestApi\Comments;
 use contentography\RestApi\Courses;
+use contentography\RestApi\Experts;
+use contentography\RestApi\Vipuskniky;
 
 class RestApi
 {
@@ -21,6 +24,9 @@ class RestApi
     protected function __construct()
     {
         Courses::get_instance();
+        Vipuskniky::get_instance();
+        Comments::get_instance();
+        Experts::get_instance();
         $this->set_hooks();
     }
 
