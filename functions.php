@@ -43,7 +43,7 @@ require_once DIR_PATH . '/inc/helpers/autoloader.php';
 
 function contentography_get_theme_instance()
 {
-    \contentography\Inc\contentography::get_instance();
+    \CONTENTOGRAPHY_THEME\Inc\contentography::get_instance();
 }
 
 contentography_get_theme_instance();

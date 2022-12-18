@@ -5,6 +5,9 @@
   padding-top: 60px;
   padding-bottom: 103px;
   overflow: hidden;
+  .container {
+    position: relative;
+  }
   &__wrapper {
     width: 100%;
     height: auto;

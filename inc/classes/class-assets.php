@@ -8,10 +8,9 @@
  * 
  */
 
-namespace contentography\Inc;
+namespace CONTENTOGRAPHY_THEME\Inc;
 
-use contentography\Inc\Traits\Singleton;
-use MyThemeShop\Helpers\Arr;
+use CONTENTOGRAPHY_THEME\Inc\Traits\Singleton;
 
 class Assets
 {

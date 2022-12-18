@@ -3,10 +3,14 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 require("laravel-mix-webp");
-require("laravel-mix-clean");
+// require("laravel-mix-clean");
 let productionSourceMaps = process.env.NODE_ENV === "development";
 
 mix
+  // .clean({
+  //   cleanStaleWebpackAssets: false,
+  // })
+  .setPublicPath("./public")
   .sass("./assets/scss/style.scss", "./css/style.css")
   .sass("./assets/scss/editor-style.scss", "./css/editor-style.css")
   .sass("./assets/scss/main.scss", "./css/main.css")
@@ -142,15 +146,10 @@ mix
     "./assets/scss/minicourse/cvetretush.scss",
     "/css/minicourse/cvetretush.css"
   )
-
-  .setPublicPath("./public")
-  .clean()
   .copy("./assets/fonts", "public/fonts")
   .copy("./assets/img", "public/img")
   .copy("./public/css/style.css", "../")
   .copy("./public/css/editor-style.css", "../")
-  .sourceMaps(productionSourceMaps, "source-map")
-  .disableSuccessNotifications()
   .ImageWebp({
     from: "./assets/img", // Путь относительно каталога с webpack.mix.js
     to: "./public/img", // Путь относительно каталога с webpack.mix.js
@@ -158,22 +157,11 @@ mix
       quality: 90,
     },
   })
-  .webpackConfig({
-    plugins: [
-      // new ImageminPlugin({
-      //   test: /\.(jpe?g|png|gif)$/i,
-      //   disable: productionSourceMaps,
-      //   pngquant: {
-      //     quality: 95,
-      //   },
-      // }),
-    ],
-  })
-
+  .sourceMaps(productionSourceMaps, "source-map")
+  .disableSuccessNotifications()
   .options({
     processCssUrls: false,
     autoprefixer: {
-      remove: false,
       options: {
         browsers: ["last 6 versions"],
       },

@@ -1,6 +1,6 @@
 <?php
 
-use contentography\Inc\Getters;
+use CONTENTOGRAPHY_THEME\Inc\Getters;
 
 $getClass = Getters::get_instance();
 

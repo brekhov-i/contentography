@@ -8,18 +8,18 @@
  * 
  */
 
-namespace contentography\RestApi;
+namespace CONTENTOGRAPHY_THEME\RestApi;
 
-use contentography\Inc\Getters;
-use contentography\Inc\Traits\Singleton;
+use CONTENTOGRAPHY_THEME\Inc\Getters;
+use CONTENTOGRAPHY_THEME\Inc\Traits\Singleton;
 use WP_REST_Request;
+
 
 class Courses
 {
 
   use Singleton;
 
-  protected $classGetters = Getters::get_instance();
 
   protected function __construct()
   {
@@ -57,7 +57,7 @@ class Courses
       $courses = array_map(function ($course) {
         $course_data['ID'] = $course->ID;
         $course_data['title'] = $course->post_title;
-        $course_data['count'] = $this->classGetters->get_users($course->ID);
+        $course_data['count'] = Getters::get_instance()->get_users($course->ID);
 
         return $course_data;
       }, $courses);

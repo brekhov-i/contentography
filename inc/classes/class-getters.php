@@ -8,9 +8,9 @@
  * 
  */
 
-namespace contentography\Inc;
+namespace CONTENTOGRAPHY_THEME\Inc;
 
-use contentography\Inc\Traits\Singleton;
+use CONTENTOGRAPHY_THEME\Inc\Traits\Singleton;
 
 class Getters
 {

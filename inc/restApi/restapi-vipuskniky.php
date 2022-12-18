@@ -8,14 +8,13 @@
  * 
  */
 
-namespace contentography\RestApi;
+namespace CONTENTOGRAPHY_THEME\RestApi;
 
-use contentography\Inc\Getters;
-use contentography\Inc\Traits\Singleton;
+use CONTENTOGRAPHY_THEME\Inc\Getters;
+use CONTENTOGRAPHY_THEME\Inc\Traits\Singleton;
 use DateTimeImmutable;
 use WP_REST_Request;
 
-const classGetters = Getters::get_instance();
 
 class Vipuskniky
 {
@@ -47,7 +46,7 @@ class Vipuskniky
     {
       $formatUsers = [];
 
-      $users = classGetters->get_allVipuskniky();
+      $users = Getters::get_instance()->get_allVipuskniky();
 
       $allAcf = get_fields($users[3]);
 

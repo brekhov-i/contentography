@@ -1,6 +1,6 @@
 <?php
 
-use contentography\Inc\Getters;
+use CONTENTOGRAPHY_THEME\Inc\Getters;
 
 $getPostClass = Getters::get_instance();
 $courses = $getPostClass->get_posts_p(-1, 'viewCart', true);

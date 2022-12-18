@@ -1,6 +1,6 @@
 <?php
 
-use contentography\Inc\Getters;
+use CONTENTOGRAPHY_THEME\Inc\Getters;
 
 $classGetPosts = Getters::get_instance();
 $courses = get_field('kursy');

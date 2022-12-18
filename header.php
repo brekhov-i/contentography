@@ -1,20 +1,35 @@
-<?php header("Last-Modified: " . get_the_modified_date('r')) ?>
+<?php
+
+use CONTENTOGRAPHY_THEME\Inc\Getters;
+
+header("Last-Modified: " . get_the_modified_date('r'));
+
+$gettersClass = Getters::get_instance();
+$getTime = $gettersClass->compareDate('2022-12-18 00:00:00');
+$getTime1 = $gettersClass->compareDate('2022-12-19 19:00:00');
+
+?>
+
 <!doctype html>
-<html lang="ru">
+<html <?php language_attributes(); ?>>
 
 <head>
-
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo('charset') ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link type="image/x-icon" href="<?= get_template_directory_uri() ?>/favicon.ico" rel="shortcut icon">
+  <meta http-equiv="Content-Type" Content="<?php bloginfo('html_type'); ?>">
 
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
 
-  <?php get_template_part('templates/modules/baners/newYear'); ?>
+  <?php if ($getTime && $getTime1) : ?>
+    <?php get_template_part('templates/modules/baners/intensivCRD'); ?>
+  <?php elseif (!$getTime && $getTime1) : ?>
+    <?php get_template_part('templates/modules/baners/intensivCRD1'); ?>
+  <?php endif; ?>
 
   <header class="header">
     <div class="header__mobileBlock <?php if (is_user_logged_in()) echo 'header__mobileBlock--logged' ?>">

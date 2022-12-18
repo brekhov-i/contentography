@@ -14,7 +14,9 @@ use contentography\Inc\Getters;
 
 $getClass = Getters::get_instance();
 
-$posts = $getClass->get_posts_post(-1, 'view_cart_or_no')
+$posts = $getClass->get_posts_post(-1, 'view_cart_or_no');
+
+var_dump(!empty($posts) && is_array($posts));
 
 ?>
 

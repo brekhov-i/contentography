@@ -1,6 +1,6 @@
 <?php
 
-use contentography\Inc\Menus;
+use CONTENTOGRAPHY_THEME\Inc\Menus;
 
 $menu_class     = Menus::get_instance();
 $header_menu_id = $menu_class->get_menu_id('header_menu');

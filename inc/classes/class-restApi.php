@@ -8,13 +8,13 @@
  * 
  */
 
-namespace contentography\Inc;
+namespace CONTENTOGRAPHY_THEME\Inc;
 
-use contentography\Inc\Traits\Singleton;
-use contentography\RestApi\Comments;
-use contentography\RestApi\Courses;
-use contentography\RestApi\Experts;
-use contentography\RestApi\Vipuskniky;
+use CONTENTOGRAPHY_THEME\Inc\Traits\Singleton;
+use CONTENTOGRAPHY_THEME\RestApi\Comments;
+use CONTENTOGRAPHY_THEME\RestApi\Courses;
+use CONTENTOGRAPHY_THEME\RestApi\Experts;
+use CONTENTOGRAPHY_THEME\RestApi\Vipuskniky;
 
 class RestApi
 {

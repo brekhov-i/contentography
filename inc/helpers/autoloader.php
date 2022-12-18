@@ -6,7 +6,7 @@
  * @package contentography
  */
 
-namespace contentography\Inc\Helpers;
+namespace CONTENTOGRAPHY_THEME\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -18,7 +18,7 @@ namespace contentography\Inc\Helpers;
 function autoloader($resource = '')
 {
     $resource_path  = false;
-    $namespace_root = 'contentography\\';
+    $namespace_root = 'CONTENTOGRAPHY_THEME\\';
     $resource       = trim($resource, '\\');
     if (empty($resource) || strpos($resource, '\\') === false || strpos($resource, $namespace_root) !== 0) {
         // Not our namespace, bail out.
@@ -93,4 +93,4 @@ function autoloader($resource = '')
     }
 }
 
-spl_autoload_register('\contentography\Inc\Helpers\autoloader');
+spl_autoload_register('\CONTENTOGRAPHY_THEME\Inc\Helpers\autoloader');
